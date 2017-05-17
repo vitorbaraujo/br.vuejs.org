@@ -342,7 +342,7 @@ body.docs #nav {
   margin: 0;
   padding: 0;
   position: absolute;
-  right: 60px;
+  right: 30px;
   top: 10px;
   height: 40px;
   line-height: 40px;
@@ -461,8 +461,11 @@ body.docs #nav {
 .sidebar ul {
   list-style-type: none;
   margin: 0;
-  line-height: 1.8em;
+  line-height: 1.5em;
   padding-left: 1em;
+}
+.sidebar li {
+  margin-bottom: 0.5em;
 }
 .sidebar .version-select {
   vertical-align: middle;

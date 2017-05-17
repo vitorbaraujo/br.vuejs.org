@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Join the Vue.js Community! — Vue.js</title>
+        <title>Junte-se à Comunidade Vue.js! — Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitivo, Rápido e Modularizado framework MVVM para construção de interfaces interativas.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Join the Vue.js Community! — Vue.js">
+        <meta property="og:title" content="Junte-se à Comunidade Vue.js! — Vue.js">
         <meta property="og:description" content="Vue.js - Intuitivo, Rápido e Modularizado framework MVVM para construção de interfaces interativas.">
         <meta property="og:image" content="https://br.vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Join the Vue.js Community! — Vue.js">
+        <meta name="twitter:title" content="Junte-se à Comunidade Vue.js! — Vue.js">
         <meta name="twitter:description" content="Vue.js - Intuitivo, Rápido e Modularizado framework MVVM para construção de interfaces interativas.">
         <meta name="twitter:image" content="https://br.vuejs.org/images/logo.png">
 
@@ -90,18 +90,17 @@
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
     <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
     <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
     <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
     <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
 <li>
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
-  <span class="new-label">NOVO!</span>
 </li>
 
   </ul>
@@ -153,18 +152,17 @@
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
     <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
     <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
     <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
     <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
 <li>
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
-  <span class="new-label">NOVO!</span>
 </li>
 
     </ul>
@@ -555,7 +553,7 @@
                 
                 
                 <li>
-                    <a href="/v2/guide/join.html" class="sidebar-link current">Join the Vue.js Community!</a>
+                    <a href="/v2/guide/join.html" class="sidebar-link current">Junte-se à Comunidade Vue.js!</a>
                 </li>
             
             
@@ -567,45 +565,60 @@
 <div class="content guide with-sidebar join-guide">
     
       <div id="ad">
-  <!-- <span>Sponsored By</span><br>
-  <a href="http://www.thedifferenceengine.io/" target="_blank"
-    style="background-color: rgba(0,0,0,.85); padding: 10px 0">
-    <img src="/images/tde.png">
-  </a> -->
-  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+  <script>
+    (function () {
+      var showConfPromo = Math.random() <= 0.33
+      if (showConfPromo) {
+        var c = document.createElement('div')
+        c.id = 'conf-promo'
+        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
+          '<img src="/images/conf.png" alt="vueconf">' +
+          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
+        '</a>'
+        document.getElementById('ad').appendChild(c)
+      } else {
+        var s = document.createElement('script')
+        s.setAttribute('async', '')
+        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+        s.id = '_carbonads_js'
+        document.getElementById('ad').appendChild(s)
+      }
+    })()
+  </script>
 </div>
 
     
     
-      <h1>Join the Vue.js Community!</h1>
+      <h1>Junte-se à Comunidade Vue.js!</h1>
     
-    <p>Vue’s community is growing incredibly fast and if you’re reading this, there’s a good chance you’re ready to join it. So… welcome!</p>
-<p>Now we’ll answer both what the community can do for you and what you can do for the community.</p>
-<h2 id="Resources-You’ll-Enjoy"><a href="#Resources-You’ll-Enjoy" class="headerlink" title="Resources You’ll Enjoy"></a>Resources You’ll Enjoy</h2><h3 id="Get-Support"><a href="#Get-Support" class="headerlink" title="Get Support"></a>Get Support</h3><ul>
-<li><a href="http://forum.vuejs.org/" target="_blank" rel="external">Forum</a>: The best place to ask questions and get answers about Vue and its ecosystem.</li>
-<li><a href="https://gitter.im/vuejs/vue" target="_blank" rel="external">Gitter Channel</a>: A place for devs to meet and chat. You can ask questions here too, but the forum is the better platform, since the discussions are threaded.</li>
-<li><a href="https://github.com/vuejs" target="_blank" rel="external">Github</a>: If you have a bug to report or feature to request, that’s what the GitHub issues are for. We also welcome pull requests!</li>
+    <p>A comunidade Vue está crescendo incrivelmente rápido e, se você está lendo isso, há uma grande chance de que você está pronto para se juntar a nós. Então… Bem-vindo!</p>
+<p>Agora iremos responder tanto o que a comunidade pode fazer por você, quanto o que você pode fazer por nós.</p>
+<h2 id="Recursos-para-Voce-Aproveitar"><a href="#Recursos-para-Voce-Aproveitar" class="headerlink" title="Recursos para Você Aproveitar"></a>Recursos para Você Aproveitar</h2><h3 id="Obtendo-Suporte"><a href="#Obtendo-Suporte" class="headerlink" title="Obtendo Suporte"></a>Obtendo Suporte</h3><ul>
+<li><a href="http://forum.vuejs.org/" target="_blank" rel="external">Fórum</a> (<em>inglês</em>): O melhor lugar para fazer perguntas e obter respostas sobre Vue e seu ecossistema diretamente para alguns dos desenvolvedores mais experientes.</li>
+<li><a href="https://gitter.im/vuejs/vue" target="_blank" rel="external">Canal no Gitter</a> (<em>inglês</em>): Um local para desenvolvedores se encontrarem e conversarem. Você pode fazer perguntas ali também, mas o fórum é uma plataforma melhor, já que as discussões são organizadas em tópicos.</li>
+<li><a href="https://vuejs-brasil.slack.com/" target="_blank" rel="external">Canal no Slack</a> (<em>português</em>): Se a conversa em inglês não é muito sua praia, convidamos para o canal em português, com espaço para dúvidas e compartilhamento de coisas úteis.</li>
+<li><a href="https://github.com/vuejs" target="_blank" rel="external">GitHub</a> (<em>inglês</em>): Se você tiver um <em>bug</em> para reportar ou um recurso para solicitar, é para isso que <em>issues</em> do GitHub estão lá. Também agradecemos <em>pull requests</em>!</li>
 </ul>
-<h3 id="Explore-the-Ecosystem"><a href="#Explore-the-Ecosystem" class="headerlink" title="Explore the Ecosystem"></a>Explore the Ecosystem</h3><ul>
-<li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="external">The Awesome Vue Page</a>: See what other awesome resources have been published by other awesome people.</li>
-<li><a href="http://forum.vuejs.org/c/show-and-tell" target="_blank" rel="external">The “Show and Tell” Subforum</a>: Another great place to check out what others have built with and for the growing Vue ecosystem.</li>
+<h3 id="Explorando-o-Ecossistema"><a href="#Explorando-o-Ecossistema" class="headerlink" title="Explorando o Ecossistema"></a>Explorando o Ecossistema</h3><ul>
+<li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="external">Página do Awesome Vue</a>: Veja quais outros incríveis recursos foram publicados por outras pessoas incríveis.</li>
+<li><a href="http://forum.vuejs.org/c/show-and-tell" target="_blank" rel="external">O Subforum “Show and Tell”</a>: Outro lugar legal para checar o que outros construíram para o crescimento do ecossistema Vue.</li>
 </ul>
-<h2 id="What-You-Can-Do"><a href="#What-You-Can-Do" class="headerlink" title="What You Can Do"></a>What You Can Do</h2><h3 id="Contribute-Code"><a href="#Contribute-Code" class="headerlink" title="Contribute Code"></a>Contribute Code</h3><p>As with any project, there are rules to contributing. To ensure that we can help you or accept your pull request as quickly as possible, please read <a href="https://github.com/vuejs/vue/blob/dev/.github/CONTRIBUTING.md" target="_blank" rel="external">the contributing guide</a>.</p>
-<p>After that, you’ll be ready to contribute to Vue’s core repositories:</p>
+<h2 id="Como-Colaborar"><a href="#Como-Colaborar" class="headerlink" title="Como Colaborar"></a>Como Colaborar</h2><h3 id="Contribuir-Codificando"><a href="#Contribuir-Codificando" class="headerlink" title="Contribuir Codificando"></a>Contribuir Codificando</h3><p>Como em qualquer projeto, há regras para contribuir. Para garantir que podemos lhe ajudar ou aceitar seu <em>pull request</em> o mais rápido possível, por favor leia o <a href="https://github.com/vuejs/vue/blob/dev/.github/CONTRIBUTING.md" target="_blank" rel="external">guia de contribuição</a>.</p>
+<p>Depois, você estará pronto para contribuir com os repositórios principais do Vue:</p>
 <ul>
-<li><a href="https://github.com/vuejs/vue" target="_blank" rel="external">vue</a>: the core library</li>
-<li><a href="https://github.com/vuejs/vuex" target="_blank" rel="external">vuex</a>: Flux-inspired state management</li>
-<li><a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a>: a routing system for SPAs</li>
+<li><a href="https://github.com/vuejs/vue" target="_blank" rel="external">vue</a>: a biblioteca base</li>
+<li><a href="https://github.com/vuejs/vuex" target="_blank" rel="external">vuex</a>: o gerenciamento de estado</li>
+<li><a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a>: o sistema de rotas para SPAs</li>
 </ul>
-<p>…as well as many smaller official <a href="https://github.com/vuejs" target="_blank" rel="external">companion libraries</a>.</p>
-<h3 id="Share-and-Build-Your-Experience"><a href="#Share-and-Build-Your-Experience" class="headerlink" title="Share (and Build) Your Experience"></a>Share (and Build) Your Experience</h3><p>Apart from answering questions and sharing resources in the forum and Gitter channel, there are a few other less obvious ways to share and expand what you know:</p>
+<p>… E também para muitas outras <a href="https://github.com/vuejs" target="_blank" rel="external">bibliotecas parceiras</a> menores.</p>
+<h3 id="Compartilhando-e-Criando-Experiencia"><a href="#Compartilhando-e-Criando-Experiencia" class="headerlink" title="Compartilhando (e Criando) Experiência"></a>Compartilhando (e Criando) Experiência</h3><p>Além de responder a questões e compartilhar coisas no fórum ou nos canais de discussão, há outras maneiras menos óbvias de compartilhar e expandir o que você sabe:</p>
 <ul>
-<li><strong>Develop learning materials.</strong> It’s often said that the best way to learn is to teach. If there’s something interesting you’re doing with Vue, strengthen your expertise by writing a blog post, developing a workshop, or even just publishing a gist that you share on social media.</li>
-<li><strong>Watch a repo you care about.</strong> This will send you notifications whenever there’s activity in that repository, giving you insider knowledge about ongoing discussions and upcoming features. It’s a fantastic way to build expertise so that you’re eventually able to help address issues and pull requests.</li>
+<li><strong>Desenvolvendo material de estudo.</strong> É dito frequentemente que a melhor maneira de aprender é ensinar. Se há algo interessante que você está fazendo com Vue, reforce seu conhecimento escrevendo uma postagem em um <em>blog</em>, criando um <em>workshop</em>, ou mesmo apenas publicando um <em>gist</em> e compartilhando em mídias sociais.</li>
+<li><strong>Observando um repositório que você curte.</strong> Isto irá enviá-lo notificações sempre que houver atividade no repositório, lhe proporcionando conhecimento do tipo <em>insider</em> sobre discussões que estão ocorrendo e recursos futuros. É uma maneira fantástica de construir experiência que eventualmente lhe permitirá ajudar a resolver <em>issues</em> e <em>pull requests</em>.</li>
 </ul>
-<h3 id="Translate-Docs"><a href="#Translate-Docs" class="headerlink" title="Translate Docs"></a>Translate Docs</h3><p>Vue has already spread across the globe, with even the core team in at least half a dozen timezones. <a href="http://forum.vuejs.org/" target="_blank" rel="external">The forum</a> includes 7 languages and counting and many of our docs have <a href="https://github.com/vuejs?utf8=%E2%9C%93&amp;query=vuejs.org" target="_blank" rel="external">actively-maintained translations</a>. We’re very proud of Vue’s international reach, but we can do even better.</p>
-<p>I hope that right now, you’re reading this sentence in your preferred language. If not, would you like to help us get there?</p>
-<p>If so, please feel free to fork the repo for <a href="https://github.com/vuejs/vuejs.org/" target="_blank" rel="external">these docs</a> or for any other officially maintained documentation, then start translating. Once you’ve made some progress, open an issue or pull request in the main repo and we’ll put out a call for more contributors to help you out.</p>
+<h3 id="Traduzindo-a-Documentacao"><a href="#Traduzindo-a-Documentacao" class="headerlink" title="Traduzindo a Documentação"></a>Traduzindo a Documentação</h3><p>Vue já se espalhou pelo globo, até mesmo com o time principal ao menos em meia dúzia de fusos-horário diferentes. O <a href="http://forum.vuejs.org/" target="_blank" rel="external">forum</a> atualmente contempla 4 línguas, e nossa documentação possui <a href="https://github.com/vuejs/vuejs.org#on-translations" target="_blank" rel="external">traduções mantidas ativamente</a>, como esta daqui em português. Nós estamos muito orgulhosos pela expansão internacional do Vue, mas podemos fazer ainda melhor.</p>
+<p>Esperamos que agora mesmo você esteja lendo esta frase em sua língua preferida e que tenha encontrado este guia com a qualidade ideal. Se não for, gostaria de nos ajudar a chegar lá?</p>
+<p>Se quiser, sinta-se à vontade para fazer um <em>fork</em> do repositório <a href="https://github.com/vuejs/vuejs.org/" target="_blank" rel="external">desta documentação</a> para iniciar uma tradução para uma nova língua, ou se junte a alguma das tradução em andamento. Esta tradução em português brasileiro é um destes casos, mantido exclusivamente por um grupo de desenvolvedores apaixonados pelo Vue. Caso encontre algum erro na tradução, por favor crie uma <em>issue</em> em <a href="https://github.com/vuejs-br/br.vuejs.org/issues" target="_blank" rel="external">nosso projeto de tradução no GitHub</a>.</p>
 
     
       <div class="guide-links">
@@ -628,7 +641,7 @@
             <script src="/js/smooth-scroll.min.js"></script>
         
 
-        <!-- main custom script for sidebars, version selects etc. -->        
+        <!-- main custom script for sidebars, version selects etc. -->
         <script src="/js/css.escape.js"></script>
         <script src="/js/common.js"></script>
 

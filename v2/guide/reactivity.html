@@ -90,18 +90,17 @@
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
     <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
     <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
     <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
     <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
 <li>
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
-  <span class="new-label">NOVO!</span>
 </li>
 
   </ul>
@@ -153,18 +152,17 @@
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
     <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
     <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
     <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
     <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
 <li>
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
-  <span class="new-label">NOVO!</span>
 </li>
 
     </ul>
@@ -555,7 +553,7 @@
                 
                 
                 <li>
-                    <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
+                    <a href="/v2/guide/join.html" class="sidebar-link">Junte-se à Comunidade Vue.js!</a>
                 </li>
             
             
@@ -567,21 +565,35 @@
 <div class="content guide with-sidebar reactivity-guide">
     
       <div id="ad">
-  <!-- <span>Sponsored By</span><br>
-  <a href="http://www.thedifferenceengine.io/" target="_blank"
-    style="background-color: rgba(0,0,0,.85); padding: 10px 0">
-    <img src="/images/tde.png">
-  </a> -->
-  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+  <script>
+    (function () {
+      var showConfPromo = Math.random() <= 0.33
+      if (showConfPromo) {
+        var c = document.createElement('div')
+        c.id = 'conf-promo'
+        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
+          '<img src="/images/conf.png" alt="vueconf">' +
+          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
+        '</a>'
+        document.getElementById('ad').appendChild(c)
+      } else {
+        var s = document.createElement('script')
+        s.setAttribute('async', '')
+        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+        s.id = '_carbonads_js'
+        document.getElementById('ad').appendChild(s)
+      }
+    })()
+  </script>
 </div>
 
     
     
       <h1>Reatividada em Profundidade</h1>
     
-    <p>Cobrimos a maioria das noções básicas - agora é hora de dar um mergulho profundo! Uma das características mais distintas do Vue é o sistema de reatividade não obstrutivo. Modelos são simplesmente objetos JavaScript. Quando você os modifica, a exibição é visualização é atualizada. Isso torna o gerenciamento de estado muito simples e intuitivo, mas também é importante entender como isso funciona para evitar algumas armadilhas comuns. Nesta seção, vamos cavar alguns dos detalhes de baixo nível do sistema de reatividade do Vue.</p>
-<h2 id="Como-as-Altercoes-sao-Monitoradas"><a href="#Como-as-Altercoes-sao-Monitoradas" class="headerlink" title="Como as Alterções são Monitoradas"></a>Como as Alterções são Monitoradas</h2><p>Quando você passar um objeto JavaScript simples para uma instância do Vue, como a opção <code>data</code>, o Vue irá percorrer todas as suas propriedades e convertê-las para getter/setters usando <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">Object.defineProperty</a>. Esta é uma característica un-shimmable encontrada somente a partir do ES5, razão pela qual o Vue não suporta o IE8 e versões anteriores.</p>
-<p>Os getter/setters são invisíveis para o usuário, mas debaixo do capô, eles permitem ao Vue executar o rastreamento de dependência e notificações de alteração quando propriedades são acessadas ou modificadas. Uma ressalva é que consoles de browsers formatam getter/setters diferentemente quando alteram objetos de dados, então você pode querer instalar o [vue-devtools] (<a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">https://github.com/vuejs/vue-devtools</a>)  para uma ter interface mais amigável para inspeção.</p>
+    <p>Cobrimos a maioria das noções básicas - agora é hora de dar um mergulho profundo! Uma das características mais distintas do Vue é o sistema de reatividade não obstrutivo. Modelos são simplesmente objetos JavaScript. Quando você os modifica, a visualização é atualizada. Isso torna o gerenciamento de estado muito simples e intuitivo, mas também é importante entender como isso funciona para evitar algumas armadilhas comuns. Nesta seção, vamos cavar alguns dos detalhes de baixo nível do sistema de reatividade do Vue.</p>
+<h2 id="Como-as-Altercoes-sao-Monitoradas"><a href="#Como-as-Altercoes-sao-Monitoradas" class="headerlink" title="Como as Alterções são Monitoradas"></a>Como as Alterções são Monitoradas</h2><p>Quando você passa um objeto JavaScript simples para uma instância do Vue, como a opção <code>data</code>, o Vue irá percorrer todas as suas propriedades e convertê-las para getter/setters usando <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">Object.defineProperty</a>. Esta é uma característica un-shimmable encontrada somente a partir do ES5, razão pela qual o Vue não suporta o IE8 e versões anteriores.</p>
+<p>Os getter/setters são invisíveis para o usuário, mas debaixo do capô, eles permitem ao Vue executar o rastreamento de dependência e notificações de alteração quando propriedades são acessadas ou modificadas. Uma ressalva é que consoles de browsers formatam getter/setters diferentemente quando alteram objetos de dados, então você pode querer instalar o <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a>  para ter uma interface de inspeção mais amigável.</p>
 <p>Cada instância de componente tem um observador de instância, <strong>watcher</strong>, correspondente, que registra todas as propriedades “tocadas” durante a renderização do componente e depedências. Mais tarde, quando o setter de uma dependência é acionado, ele notifica o watcher que então faz com que o componente seja re-renderizado.</p>
 <p><img src="/images/data.png" alt="Reactivity Cycle"></p>
 <h2 id="Resalva-sobre-a-deteccao-de-alteracoes"><a href="#Resalva-sobre-a-deteccao-de-alteracoes" class="headerlink" title="Resalva sobre a detecção de alterações"></a>Resalva sobre a detecção de alterações</h2><p>Devido às limitações do JavaScript moderno (e ao abandono do <code>Object.observe</code>), o Vue <strong>não pode detectar adicão ou exclusão</strong>. O Vue executa o processo de conversão de getter/setter na inicialização da instância; uma propriedade deve estar presente no objeto <code>data</code> nesse momento para que o Vue faça sua conversão e o torne reativo. Por exemplo:</p>
@@ -592,8 +604,8 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">this</span>.$set(<span class="keyword">this</span>.someObject, <span class="string">'b'</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure>
 <p>Às vezes você pode querer atribuir uma série de propriedades a um objeto existente, por exemplo, usando <code>Object.assign()</code> ou <code>_.extend()</code>. No entanto, novas propriedades adicionadas ao objeto não acionaram mudanças. Em tais casos, crie um novo objeto com as propriedades do objeto original e junte a um objeto vazio:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// ao invés de `Object.assign(this.someObject, &#123; a: 1, b: 2 &#125;)`</span></div><div class="line"><span class="keyword">this</span>.someObject = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.someObject, &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;)</div></pre></td></tr></table></figure>
-<p>Existem também algumas ressalvas relacionadas com arrays, que foram discutidas anteriormente na <a href="list.html#Caveats">seçao sobre renderização de listas</a>.</p>
-<h2 id="Declarando-Propriedades-Reativas"><a href="#Declarando-Propriedades-Reativas" class="headerlink" title="Declarando Propriedades Reativas"></a>Declarando Propriedades Reativas</h2><p>Como o Vue não permite adicionar dinamicamente Propriedades reativas de nível root, isso significa que você tem inicializar a instância declarando todas as propriedades de nível root com dados iniciais, apenas um valor vazio:</p>
+<p>Existem também algumas ressalvas relacionadas com arrays, que foram discutidas anteriormente na <a href="list.html#Caveats">seção sobre renderização de listas</a>.</p>
+<h2 id="Declarando-Propriedades-Reativas"><a href="#Declarando-Propriedades-Reativas" class="headerlink" title="Declarando Propriedades Reativas"></a>Declarando Propriedades Reativas</h2><p>Como o Vue não permite adicionar dinamicamente Propriedades reativas de nível root, você precisa inicializar instâncias Vue declarando todas as propriedades de nível root com dados iniciais, apenas um valor vazio:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="comment">// declare message with an empty value</span></div><div class="line">    message: <span class="string">''</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;div&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// set `message` later</span></div><div class="line">vm.message = <span class="string">'Hello!'</span></div></pre></td></tr></table></figure>
 <p>Se a propriedade <code>message</code> não for declarada em <code>data</code>, o Vue irá avisar que a função de renderização está tentando acessar uma propriedade que não existe.</p>
 <p>Há razões técnicas por trás dessa restrição - it eliminates a class of edge cases in the dependency tracking system, and also makes Vue instances play nicer with type checking systems. Mas há também uma consideração importante em termos de capacidade de manutenção do código: O objeto <code>data</code> é como o esquema para o estado do seu componente. Declarar todas as propriedades reativas antecipadamente faz o código do componente mais fácil de entender quando revisitado posteriormente ou lido por outro desenvolvedor.</p>
@@ -627,7 +639,7 @@
             <script src="/js/smooth-scroll.min.js"></script>
         
 
-        <!-- main custom script for sidebars, version selects etc. -->        
+        <!-- main custom script for sidebars, version selects etc. -->
         <script src="/js/css.escape.js"></script>
         <script src="/js/common.js"></script>
 
