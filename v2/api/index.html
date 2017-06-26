@@ -17,7 +17,27 @@
         <meta name="twitter:description" content="Vue.js - Intuitivo, Rápido e Modularizado framework MVVM para construção de interfaces interativas.">
         <meta name="twitter:image" content="https://br.vuejs.org/images/logo.png">
 
-        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <link rel="icon" href="/images/logo.png" type="image/png">
+
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
 
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
@@ -187,16 +207,18 @@
             
         </h2>
         <ul class="menu-root">
-            
-            
-        </ul>
+    
+    
+</ul>
+
     </div>
 </div>
 
 
 <div class="content api with-sidebar ">
     
-      <div id="ad">
+      
+        <div id="ad">
   <script>
     (function () {
       var showConfPromo = Math.random() <= 0.33
@@ -219,6 +241,7 @@
   </script>
 </div>
 
+      
     
     
     <h2 id="Configuracao-Global"><a href="#Configuracao-Global" class="headerlink" title="Configuração Global"></a>Configuração Global</h2><p><code>Vue.config</code> é um objeto contendo a configuração global do Vue. Você pode modificar suas propriedades listadas abaixo antes de iniciar sua aplicação:</p>
@@ -1161,7 +1184,7 @@
 </ul>
 </li>
 <li><p><strong>Usage:</strong></p>
-<p>Remove event listener(s).</p>
+<p>Remove custom event listener(s).</p>
 <ul>
 <li><p>If no arguments are provided, remove all event listeners;</p>
 </li>
@@ -1396,8 +1419,10 @@
 </li>
 <li><p><strong>Modifiers:</strong></p>
 <ul>
-<li><code>.prop</code> - Bind as a DOM property instead of an attribute. (<a href="http://stackoverflow.com/questions/6003819/properties-and-attributes-in-html#answer-6004028" target="_blank" rel="external">what’s the difference?</a>)</li>
-<li><code>.camel</code> - (2.1.0+) transform the kebab-case attribute name into camelCase.</li>
+<li><p><code>.prop</code> - Bind as a DOM property instead of an attribute (<a href="http://stackoverflow.com/questions/6003819/properties-and-attributes-in-html#answer-6004028" target="_blank" rel="external">what’s the difference?</a>). If the tag is a component then <code>.prop</code> will set the property on the component’s <code>$el</code>.</p>
+</li>
+<li><p><code>.camel</code> - (2.1.0+) transform the kebab-case attribute name into camelCase.</p>
+</li>
 <li><code>.sync</code> - (2.3.0+) a syntax sugar that expands into a <code>v-on</code> handler for updating the bound value.</li>
 </ul>
 </li>
@@ -1519,6 +1544,20 @@
 <li><p><strong>See also:</strong> <a href="../guide/components.html#Named-Slots">Named Slots</a></p>
 </li>
 </ul>
+<h3 id="is"><a href="#is" class="headerlink" title="is"></a>is</h3><ul>
+<li><p><strong>Expects:</strong> <code>string</code></p>
+<p>Used for <a href="../guide/components.html#Dynamic-Components">dynamic components</a> and to work around <a href="../guide/components.html#DOM-Template-Parsing-Caveats">limitations of in-DOM templates</a>.</p>
+<p>For example:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- component changes when currentView changes --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">v-bind:is</span>=<span class="string">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- necessary because &lt;my-row&gt; would be invalid inside --&gt;</span></div><div class="line"><span class="comment">&lt;!-- a &lt;table&gt; element and so would be hoisted out      --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>For detailed usage, follow the links in the description above.</p>
+</li>
+<li><p><strong>See also:</strong></p>
+<ul>
+<li><a href="../guide/components.html#Dynamic-Components">Dynamic Components</a></li>
+<li><a href="../guide/components.html#DOM-Template-Parsing-Caveats">DOM Template Parsing Caveats</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="Built-In-Components"><a href="#Built-In-Components" class="headerlink" title="Built-In Components"></a>Built-In Components</h2><h3 id="component"><a href="#component" class="headerlink" title="component"></a>component</h3><ul>
 <li><p><strong>Props:</strong></p>
 <ul>
@@ -1613,7 +1652,10 @@
 </blockquote>
 <p>Primarily used with preserve component state or avoid re-rendering.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- basic --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- multiple conditional children --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">comp-a</span> <span class="attr">v-if</span>=<span class="string">"a &gt; 1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp-a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">comp-b</span> <span class="attr">v-else</span>&gt;</span><span class="tag">&lt;/<span class="name">comp-b</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- used together with &lt;transition&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">transition</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Note, <code>&lt;keep-alive&gt;</code> is designed for the case where it has one direct child component that is being toggled. It does not work if you have <code>v-for</code> inside it. When there are multiple conditional children, as above, <code>&lt;keep-alive&gt;</code> requires that only one child is rendered at a time.</p>
 </li>
+</ul>
+<ul>
 <li><p><strong><code>include</code> and <code>exclude</code></strong></p>
 <blockquote>
 <p>New in 2.1.0</p>
@@ -1671,7 +1713,8 @@
         <script>
         [
           '#search-query-nav',
-          '#search-query-sidebar'
+          '#search-query-sidebar',
+          '#search-query-menu'
         ].forEach(function (selector) {
           if (!document.querySelector(selector)) return
           // search index defaults to v2
