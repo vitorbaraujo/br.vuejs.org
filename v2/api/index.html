@@ -42,6 +42,8 @@
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         <!-- main page styles -->
         <link rel="stylesheet" href="/css/page.css">
 
@@ -131,8 +133,9 @@
                 
                     
     <div class="sidebar">
-    <ul class="main-menu">
-        <li>
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
   <form id="search-form">
     <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
@@ -185,32 +188,34 @@
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
 </li>
 
-    </ul>
-    <div class="list">
-        <div class="main-sponsor">
-            <span>Patrocínio Platina</span><br>
-            <a href="https://stdlib.com" target="_blank" class="logo">
-                <img src="/images/stdlib.png">
+        </ul>
+        <div class="list">
+            <div class="main-sponsor">
+                <span>Patrocínio Platina</span><br>
+                <a href="https://stdlib.com" target="_blank" class="logo">
+                    <img src="/images/stdlib.png">
+                </a>
+            </div>
+            <a class="become-backer" href="/support-vuejs">
+                Seja um Patrocinador
             </a>
-        </div>
-        <a class="become-backer" href="/support-vuejs">
-            Seja um Patrocinador
-        </a>
-        <h2>
-            
-                <select class="version-select">
-                    <option value="SELF" selected>2.x</option>
-                    <option value="v1">1.0</option>
-                    <option value="012">0.12</option>
-                    <option value="011">0.11</option>
-                </select>
-            
-        </h2>
-        <ul class="menu-root">
+            <h2>
+                API
+                
+                    <select class="version-select">
+                        <option value="SELF" selected>2.x</option>
+                        <option value="v1">1.0</option>
+                        <option value="012">0.12</option>
+                        <option value="011">0.11</option>
+                    </select>
+                
+            </h2>
+            <ul class="menu-root">
     
     
 </ul>
 
+        </div>
     </div>
 </div>
 
@@ -221,22 +226,11 @@
         <div id="ad">
   <script>
     (function () {
-      var showConfPromo = Math.random() <= 0.33
-      if (showConfPromo) {
-        var c = document.createElement('div')
-        c.id = 'conf-promo'
-        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
-          '<img src="/images/conf.png" alt="vueconf">' +
-          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
-        '</a>'
-        document.getElementById('ad').appendChild(c)
-      } else {
-        var s = document.createElement('script')
-        s.setAttribute('async', '')
-        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
-        s.id = '_carbonads_js'
-        document.getElementById('ad').appendChild(s)
-      }
+      var s = document.createElement('script')
+      s.setAttribute('async', '')
+      s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+      s.id = '_carbonads_js'
+      document.getElementById('ad').appendChild(s)
     })()
   </script>
 </div>
@@ -1510,51 +1504,51 @@
 </ul>
 </li>
 </ul>
-<h2 id="Special-Attributes"><a href="#Special-Attributes" class="headerlink" title="Special Attributes"></a>Special Attributes</h2><h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><ul>
-<li><p><strong>Expects:</strong> <code>string</code></p>
-<p>The <code>key</code> special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed.</p>
-<p>Children of the same common parent must have <strong>unique keys</strong>. Duplicate keys will cause render errors.</p>
-<p>The most common use case is combined with <code>v-for</code>:</p>
+<h2 id="Atributos-Especiais"><a href="#Atributos-Especiais" class="headerlink" title="Atributos Especiais"></a>Atributos Especiais</h2><h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><ul>
+<li><p><strong>Espera:</strong> <code>string</code></p>
+<p>O atributo especial <code>key</code> é usado principalmente como um aviso para o algoritmo do virtual DOM do Vue identificar VNodes quando compara a nova lista de nós com a anterior. Sem <code>keys</code>, o Vue usa um algoritmo que minimiza a movimentação de elementos e tenta corrigir/reusar elementos do mesmo tipo no local tanto quanto possível. Com <code>keys</code>, ele irá reordenar os elementos baseado na ordem de mudança das <code>keys</code>, e elementos com <code>keys</code> que não estão mais presentes serão sempre removidos/destruídos.</p>
+<p>Componentes filhos com pai em comum precisam ter <strong>keys únicas</strong>. <code>keys</code> duplicadas causarão erros de renderização.</p>
+<p>O caso mais comum é combinado com o <code>v-for</code>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>It can also be used to force replacement of an element/component instead of reusing it. This can be useful when you want to:</p>
+<p>Também pode ser usado para forçar a substituição de um elemento/componente ao invés de reusa-lo. Isso pode ser útil quando você quiser:</p>
 <ul>
-<li>Properly trigger lifecycle hooks of a component</li>
-<li>Trigger transitions</li>
+<li>Ativar corretamente os hooks do ciclo de vida de um componente.</li>
+<li>Ativar transições.</li>
 </ul>
-<p>For example:</p>
+<p>Por exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">transition</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">:key</span>=<span class="string">"text"</span>&gt;</span>&#123;&#123; text &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>When <code>text</code> changes, the <code>&lt;span&gt;</code> will always be replaced instead of patched, so a transition will be triggered.</p>
+<p>Quanto <code>text</code> mudar, o <code>&lt;span&gt;</code> será substituído em vez de alterado, então a transição será ativada.</p>
 </li>
 </ul>
 <h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h3><ul>
-<li><p><strong>Expects:</strong> <code>string</code></p>
-<p><code>ref</code> is used to register a reference to an element or a child component. The reference will be registered under the parent component’s <code>$refs</code> object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- vm.$refs.p will be the DOM node --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ref</span>=<span class="string">"p"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- vm.$refs.child will be the child comp instance --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">child-comp</span> <span class="attr">ref</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">child-comp</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>When used on elements/components with <code>v-for</code>, the registered reference will be an Array containing DOM nodes or component instances.</p>
-<p>An important note about the ref registration timing: because the refs themselves are created as a result of the render function, you cannot access them on the initial render - they don’t exist yet! <code>$refs</code> is also non-reactive, therefore you should not attempt to use it in templates for data-binding.</p>
+<li><p><strong>Espera:</strong> <code>string</code></p>
+<p><code>ref</code> é usada para registrar a referência para um elemento ou um componente filho. A referência será registrada no objeto <code>$refs</code> do componente pai. Se usada em um elemento normal do DOM, a referência será aquele elemento; se usada em um componente filho, a referência será a instância do componente:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- vm.$refs.p será o nó do DOM--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ref</span>=<span class="string">"p"</span>&gt;</span>Olá<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- vm.$refs.child será a instância do componente filho --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">child-comp</span> <span class="attr">ref</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">child-comp</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Quando usada em elementos/componentes com <code>v-for</code>, a referência registrada será um Array contendo nós do DOM ou instâncias de componentes.</p>
+<p>Uma observação importante sobre o tempo do registro de <code>ref</code>: como as <code>refs</code> são criadas como resultados da função de renderização, você não pode acessá-las na renderização inicial - elas ainda não existem! <code>$refs</code> são não-reativas, portanto você não deve tentar usá-las em templates para <em>data-binding</em>.</p>
 </li>
-<li><p><strong>See also:</strong> <a href="../guide/components.html#Child-Component-Refs">Child Component Refs</a></p>
+<li><p><strong>Veja também:</strong> <a href="../guide/components.html#Child-Component-Refs">Child Component Refs</a></p>
 </li>
 </ul>
 <h3 id="slot"><a href="#slot" class="headerlink" title="slot"></a>slot</h3><ul>
-<li><p><strong>Expects:</strong> <code>string</code></p>
-<p>Used on content inserted into child components to indicate which named slot the content belongs to.</p>
-<p>For detailed usage, see the guide section linked below.</p>
+<li><p><strong>Espera:</strong> <code>string</code></p>
+<p>Usado dentro de conteúdos inseridos no componente filho para indicar a qual <em>named slot</em> o conteúdo pertence.</p>
+<p>Para maiores detalhes de uso, veja a sessão no guia linkado abaixo:</p>
 </li>
-<li><p><strong>See also:</strong> <a href="../guide/components.html#Named-Slots">Named Slots</a></p>
+<li><p><strong>Veja também:</strong> <a href="../guide/components.html#Named-Slots">Named Slots</a></p>
 </li>
 </ul>
 <h3 id="is"><a href="#is" class="headerlink" title="is"></a>is</h3><ul>
-<li><p><strong>Expects:</strong> <code>string</code></p>
-<p>Used for <a href="../guide/components.html#Dynamic-Components">dynamic components</a> and to work around <a href="../guide/components.html#DOM-Template-Parsing-Caveats">limitations of in-DOM templates</a>.</p>
-<p>For example:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- component changes when currentView changes --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">v-bind:is</span>=<span class="string">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- necessary because &lt;my-row&gt; would be invalid inside --&gt;</span></div><div class="line"><span class="comment">&lt;!-- a &lt;table&gt; element and so would be hoisted out      --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>For detailed usage, follow the links in the description above.</p>
+<li><p><strong>Espera:</strong> <code>string</code></p>
+<p>Usado para <a href="../guide/components.html#Dynamic-Components">componentes dinâmicos</a> e para trabalhar <a href="../guide/components.html#DOM-Template-Parsing-Caveats">limitações dos templates do DOM</a>.</p>
+<p>Por exemplo:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- component é alterado quando o currentView é alterado --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">v-bind:is</span>=<span class="string">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- necessário, porque &lt;my-row&gt; seria inválido dentro --&gt;</span></div><div class="line"><span class="comment">&lt;!-- do elemento &lt;table&gt; e seria "elevado" para fora (hoisted out) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Para maiores detalhes de uso, veja os links na descrição abaixo.</p>
 </li>
-<li><p><strong>See also:</strong></p>
+<li><p><strong>Veja também:</strong></p>
 <ul>
-<li><a href="../guide/components.html#Dynamic-Components">Dynamic Components</a></li>
-<li><a href="../guide/components.html#DOM-Template-Parsing-Caveats">DOM Template Parsing Caveats</a></li>
+<li><a href="../guide/components.html#Dynamic-Components">Componentes Dinâmicos</a></li>
+<li><a href="../guide/components.html#DOM-Template-Parsing-Caveats">Ressalvas do processamento do template do DOM</a></li>
 </ul>
 </li>
 </ul>
@@ -1640,8 +1634,8 @@
 <h3 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h3><ul>
 <li><p><strong>Props:</strong></p>
 <ul>
-<li><code>include</code> - string or RegExp. Only components matched by this will be cached.</li>
-<li><code>exclude</code> - string or RegExp. Any component matched by this will not be cached.</li>
+<li><code>include</code> - string or RegExp or Array. Only components matched by this will be cached.</li>
+<li><code>exclude</code> - string or RegExp or Array. Any component matched by this will not be cached.</li>
 </ul>
 </li>
 <li><p><strong>Usage:</strong></p>
@@ -1660,8 +1654,8 @@
 <blockquote>
 <p>New in 2.1.0</p>
 </blockquote>
-<p>The <code>include</code> and <code>exclude</code> props allow components to be conditionally cached. Both props can either be a comma-delimited string or a RegExp:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- comma-delimited string --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">include</span>=<span class="string">"a,b"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- regex (use v-bind) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">:include</span>=<span class="string">"/a|b/"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>The <code>include</code> and <code>exclude</code> props allow components to be conditionally cached. Both props can be a comma-delimited string, a RegExp or an Array:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- comma-delimited string --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">include</span>=<span class="string">"a,b"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- regex (use v-bind) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">:include</span>=<span class="string">"/a|b/"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Array (use v-bind) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">:include</span>=<span class="string">"['a', 'b']"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>The match is first checked on the component’s own <code>name</code> option, then its local registration name (the key in the parent’s <code>components</code> option) if the <code>name</code> option is not available. Anonymous components cannot be matched against.</p>
 <p class="tip"><code>&lt;keep-alive&gt;</code> does not work with functional components because they do not have instances to be cached.</p>
 </li>

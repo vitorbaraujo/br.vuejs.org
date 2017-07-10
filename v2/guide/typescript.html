@@ -42,6 +42,8 @@
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         <!-- main page styles -->
         <link rel="stylesheet" href="/css/page.css">
 
@@ -131,8 +133,9 @@
                 
                     
     <div class="sidebar">
-    <ul class="main-menu">
-        <li>
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
   <form id="search-form">
     <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
@@ -185,28 +188,29 @@
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
 </li>
 
-    </ul>
-    <div class="list">
-        <div class="main-sponsor">
-            <span>Patrocínio Platina</span><br>
-            <a href="https://stdlib.com" target="_blank" class="logo">
-                <img src="/images/stdlib.png">
+        </ul>
+        <div class="list">
+            <div class="main-sponsor">
+                <span>Patrocínio Platina</span><br>
+                <a href="https://stdlib.com" target="_blank" class="logo">
+                    <img src="/images/stdlib.png">
+                </a>
+            </div>
+            <a class="become-backer" href="/support-vuejs">
+                Seja um Patrocinador
             </a>
-        </div>
-        <a class="become-backer" href="/support-vuejs">
-            Seja um Patrocinador
-        </a>
-        <h2>
-            
-                <select class="version-select">
-                    <option value="SELF" selected>2.x</option>
-                    <option value="v1">1.0</option>
-                    <option value="012">0.12</option>
-                    <option value="011">0.11</option>
-                </select>
-            
-        </h2>
-        <ul class="menu-root">
+            <h2>
+                Guide
+                
+                    <select class="version-select">
+                        <option value="SELF" selected>2.x</option>
+                        <option value="v1">1.0</option>
+                        <option value="012">0.12</option>
+                        <option value="011">0.11</option>
+                    </select>
+                
+            </h2>
+            <ul class="menu-root">
     
         
         
@@ -576,9 +580,22 @@
             <a href="/v2/guide/join.html" class="sidebar-link">Junte-se à Comunidade Vue.js!</a>
         </li>
     
+        
+        
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/team.html" class="sidebar-link">Meet the Team</a>
+        </li>
+    
     
 </ul>
 
+        </div>
     </div>
 </div>
 
@@ -589,22 +606,11 @@
         <div id="ad">
   <script>
     (function () {
-      var showConfPromo = Math.random() <= 0.33
-      if (showConfPromo) {
-        var c = document.createElement('div')
-        c.id = 'conf-promo'
-        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
-          '<img src="/images/conf.png" alt="vueconf">' +
-          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
-        '</a>'
-        document.getElementById('ad').appendChild(c)
-      } else {
-        var s = document.createElement('script')
-        s.setAttribute('async', '')
-        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
-        s.id = '_carbonads_js'
-        document.getElementById('ad').appendChild(s)
-      }
+      var s = document.createElement('script')
+      s.setAttribute('async', '')
+      s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+      s.id = '_carbonads_js'
+      document.getElementById('ad').appendChild(s)
     })()
   </script>
 </div>
@@ -629,9 +635,9 @@
 <p>This tells TypeScript to leave the ES module import statements intact, which in turn allows webpack 2 to take advantage of ES-module-based tree-shaking.</p>
 <p>See <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html" target="_blank" rel="external">TypeScript compiler options docs</a> for more details.</p>
 <h2 id="Using-Vue’s-Type-Declarations"><a href="#Using-Vue’s-Type-Declarations" class="headerlink" title="Using Vue’s Type Declarations"></a>Using Vue’s Type Declarations</h2><p>Vue’s type definition exports many useful <a href="https://github.com/vuejs/vue/blob/dev/types/index.d.ts" target="_blank" rel="external">type declarations</a>. For example, to annotate an exported component options object (e.g. in a <code>.vue</code> file):</p>
-<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue, &#123; ComponentOptions &#125; from <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  props: [<span class="string">'message'</span>],</div><div class="line">  template: <span class="string">'&lt;span&gt;&#123;&#123; message &#125;&#125;&lt;/span&gt;'</span></div><div class="line">&#125; as ComponentOptions&lt;Vue&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue, &#123; ComponentOptions &#125; <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  props: [<span class="string">'message'</span>],</div><div class="line">  template: <span class="string">'&lt;span&gt;&#123;&#123; message &#125;&#125;&lt;/span&gt;'</span></div><div class="line">&#125; <span class="keyword">as</span> ComponentOptions&lt;Vue&gt;</div></pre></td></tr></table></figure>
 <h2 id="Class-Style-Vue-Components"><a href="#Class-Style-Vue-Components" class="headerlink" title="Class-Style Vue Components"></a>Class-Style Vue Components</h2><p>Vue component options can easily be annotated with types:</p>
-<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue, &#123; ComponentOptions &#125;  from <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="comment">// Declare the component's type</span></div><div class="line"><span class="keyword">interface</span> MyComponent <span class="keyword">extends</span> Vue &#123;</div><div class="line">  message: <span class="built_in">string</span></div><div class="line">  onClick (): <span class="built_in">void</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  template: <span class="string">'&lt;button @click="onClick"&gt;Click!&lt;/button&gt;'</span>,</div><div class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      message: <span class="string">'Hello!'</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// TypeScript knows that `this` is of type MyComponent</span></div><div class="line">      <span class="comment">// and that `this.message` will be a string</span></div><div class="line">      <span class="built_in">window</span>.alert(<span class="keyword">this</span>.message)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="comment">// We need to explicitly annotate the exported options object</span></div><div class="line"><span class="comment">// with the MyComponent type</span></div><div class="line">&#125; as ComponentOptions&lt;MyComponent&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue, &#123; ComponentOptions &#125;  <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="comment">// Declare the component's type</span></div><div class="line"><span class="keyword">interface</span> MyComponent <span class="keyword">extends</span> Vue &#123;</div><div class="line">  message: <span class="built_in">string</span></div><div class="line">  onClick (): <span class="built_in">void</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  template: <span class="string">'&lt;button @click="onClick"&gt;Click!&lt;/button&gt;'</span>,</div><div class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      message: <span class="string">'Hello!'</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// TypeScript knows that `this` is of type MyComponent</span></div><div class="line">      <span class="comment">// and that `this.message` will be a string</span></div><div class="line">      <span class="built_in">window</span>.alert(<span class="keyword">this</span>.message)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="comment">// We need to explicitly annotate the exported options object</span></div><div class="line"><span class="comment">// with the MyComponent type</span></div><div class="line">&#125; <span class="keyword">as</span> ComponentOptions&lt;MyComponent&gt;</div></pre></td></tr></table></figure>
 <p>Unfortunately, there are a few limitations here:</p>
 <ul>
 <li><p><strong>TypeScript can’t infer all types from Vue’s API.</strong> For example, it doesn’t know that the <code>message</code> property returned in our <code>data</code> function will be added to the <code>MyComponent</code> instance. That means if we assigned a number or boolean value to <code>message</code>, linters and compilers wouldn’t be able to raise an error, complaining that it should be a string.</p>
@@ -640,7 +646,7 @@
 </li>
 </ul>
 <p>Fortunately, <a href="https://github.com/vuejs/vue-class-component" target="_blank" rel="external">vue-class-component</a> can solve both of these problems. It’s an official companion library that allows you to declare components as native JavaScript classes, with a <code>@Component</code> decorator. As an example, let’s rewrite the above component:</p>
-<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue from <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Component from <span class="string">'vue-class-component'</span></div><div class="line"></div><div class="line"><span class="comment">// The @Component decorator indicates the class is a Vue component</span></div><div class="line">@Component(&#123;</div><div class="line">  <span class="comment">// All component options are allowed in here</span></div><div class="line">  template: <span class="string">'&lt;button @click="onClick"&gt;Click!&lt;/button&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> MyComponent extends Vue &#123;</div><div class="line">  <span class="comment">// Initial data can be declared as instance properties</span></div><div class="line">  message: <span class="built_in">string</span> = <span class="string">'Hello!'</span></div><div class="line"></div><div class="line">  <span class="comment">// Component methods can be declared as instance methods</span></div><div class="line">  onClick (): <span class="built_in">void</span> &#123;</div><div class="line">    <span class="built_in">window</span>.alert(<span class="keyword">this</span>.message)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Component <span class="keyword">from</span> <span class="string">'vue-class-component'</span></div><div class="line"></div><div class="line"><span class="comment">// The @Component decorator indicates the class is a Vue component</span></div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  <span class="comment">// All component options are allowed in here</span></div><div class="line">  template: <span class="string">'&lt;button @click="onClick"&gt;Click!&lt;/button&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> MyComponent <span class="keyword">extends</span> Vue &#123;</div><div class="line">  <span class="comment">// Initial data can be declared as instance properties</span></div><div class="line">  message: <span class="built_in">string</span> = <span class="string">'Hello!'</span></div><div class="line"></div><div class="line">  <span class="comment">// Component methods can be declared as instance methods</span></div><div class="line">  onClick (): <span class="built_in">void</span> &#123;</div><div class="line">    <span class="built_in">window</span>.alert(<span class="keyword">this</span>.message)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>With this syntax alternative, our component definition is not only shorter, but TypeScript can also infer the types of <code>message</code> and <code>onClick</code> without explicit interface declarations. This strategy even allows you to handle types for computed properties, lifecycle hooks, and render functions. For full usage details, see <a href="https://github.com/vuejs/vue-class-component#vue-class-component" target="_blank" rel="external">the vue-class-component docs</a>.</p>
 
     

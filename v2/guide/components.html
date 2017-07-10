@@ -42,6 +42,8 @@
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         <!-- main page styles -->
         <link rel="stylesheet" href="/css/page.css">
 
@@ -131,8 +133,9 @@
                 
                     
     <div class="sidebar">
-    <ul class="main-menu">
-        <li>
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
   <form id="search-form">
     <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
@@ -185,28 +188,29 @@
   <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Loja</a>
 </li>
 
-    </ul>
-    <div class="list">
-        <div class="main-sponsor">
-            <span>Patrocínio Platina</span><br>
-            <a href="https://stdlib.com" target="_blank" class="logo">
-                <img src="/images/stdlib.png">
+        </ul>
+        <div class="list">
+            <div class="main-sponsor">
+                <span>Patrocínio Platina</span><br>
+                <a href="https://stdlib.com" target="_blank" class="logo">
+                    <img src="/images/stdlib.png">
+                </a>
+            </div>
+            <a class="become-backer" href="/support-vuejs">
+                Seja um Patrocinador
             </a>
-        </div>
-        <a class="become-backer" href="/support-vuejs">
-            Seja um Patrocinador
-        </a>
-        <h2>
-            
-                <select class="version-select">
-                    <option value="SELF" selected>2.x</option>
-                    <option value="v1">1.0</option>
-                    <option value="012">0.12</option>
-                    <option value="011">0.11</option>
-                </select>
-            
-        </h2>
-        <ul class="menu-root">
+            <h2>
+                Guide
+                
+                    <select class="version-select">
+                        <option value="SELF" selected>2.x</option>
+                        <option value="v1">1.0</option>
+                        <option value="012">0.12</option>
+                        <option value="011">0.11</option>
+                    </select>
+                
+            </h2>
+            <ul class="menu-root">
     
         
         
@@ -576,9 +580,22 @@
             <a href="/v2/guide/join.html" class="sidebar-link">Junte-se à Comunidade Vue.js!</a>
         </li>
     
+        
+        
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/team.html" class="sidebar-link">Meet the Team</a>
+        </li>
+    
     
 </ul>
 
+        </div>
     </div>
 </div>
 
@@ -589,22 +606,11 @@
         <div id="ad">
   <script>
     (function () {
-      var showConfPromo = Math.random() <= 0.33
-      if (showConfPromo) {
-        var c = document.createElement('div')
-        c.id = 'conf-promo'
-        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
-          '<img src="/images/conf.png" alt="vueconf">' +
-          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
-        '</a>'
-        document.getElementById('ad').appendChild(c)
-      } else {
-        var s = document.createElement('script')
-        s.setAttribute('async', '')
-        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
-        s.id = '_carbonads_js'
-        document.getElementById('ad').appendChild(s)
-      }
+      var s = document.createElement('script')
+      s.setAttribute('async', '')
+      s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+      s.id = '_carbonads_js'
+      document.getElementById('ad').appendChild(s)
     })()
   </script>
 </div>
@@ -793,7 +799,22 @@ new Vue({
 <li>Symbol</li>
 </ul>
 <p>Além disso, <code>type</code> também pode ser uma função de construtor personalizada e a asserção será feita com uma verificação <code>instanceof</code>.</p>
-<p>Quando a validação da propriedade falha, o Vue produzirá um aviso no console (se usar a <em>build</em> de desenvolvimento).</p>
+<p>Quando a validação de propriedade falha, Vue produz um aviso no <em>console</em> (se estiver utilizando uma compilação de desenvolvimento). Observe que propriedades são validadas <strong>antes</strong> da instância do componente ser criada, portanto em funções <code>default</code> ou <code>validator</code>, propriedades da instância como <code>data</code>, <code>computed</code> ou <code>methods</code> não estarão disponíveis.</p>
+<h2 id="Atributo-Nao-Prop"><a href="#Atributo-Nao-Prop" class="headerlink" title="Atributo Não-Prop"></a>Atributo Não-Prop</h2><p>Um atributo não-prop é um atributo passado a um componente, mas que não tem uma propriedade correspondente definida através de <code>props</code>.</p>
+<p>Enquanto explicitamente definir <code>props</code> é a forma recomendada de passar informações a componentes filhos, autores de bibliotecas de componentes não podem sempre prever o contexto no qual seus componentes poderão ser utilizados. Por isso componentes podem aceitar atributos arbitrários, os quais são adicionados ao elemento raiz do componente.</p>
+<p>Por exemplo, imagine que estamos usando um componente <code>bs-date-input</code> de terceiros, com um <em>plugin</em> Bootstrap que exige um atributo <code>data-3d-date-picker</code> no <code>input</code>. Nós podemos adicionar este atributo à nossa instância do componente:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">bs-date-input</span> <span class="attr">data-3d-date-picker</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">bs-date-input</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>E o atributo <code>data-3d-date-picker=&quot;true&quot;</code> será automaticamente adicionado ao elemento raiz do <code>bs-date-input</code>.</p>
+<h3 id="Substituindo-Mesclando-Atributos-Existentes"><a href="#Substituindo-Mesclando-Atributos-Existentes" class="headerlink" title="Substituindo/Mesclando Atributos Existentes"></a>Substituindo/Mesclando Atributos Existentes</h3><p>Imagine que este é o template do <code>bs-date-input</code>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span> <span class="attr">class</span>=<span class="string">"form-control"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Para especificar um tema para nosso <em>plugin</em> de seleção de datas, precisaríamos adicionar uma classe específica, como essa:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">bs-date-input</span></span></div><div class="line">  <span class="attr">data-3d-date-picker</span>=<span class="string">"true"</span></div><div class="line">  <span class="attr">class</span>=<span class="string">"date-picker-theme-dark"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">bs-date-input</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Neste caso, dois valores diferentes para <code>class</code> estão definidos:</p>
+<ul>
+<li><code>form-control</code>, configurado pelo próprio componente em seu <em>template</em></li>
+<li><code>date-picker-theme-dark</code>, passado ao componente através de seu <em>parent</em></li>
+</ul>
+<p>Para mais atributos, o valor provido ao componente irá substituir o valor previamente definido no componente. Por exemplo, passar <code>type=&quot;large&quot;</code> irá sobreescrever <code>type=&quot;date&quot;</code> e provavelmente quebrar a funcionalidade! Por sorte, os atributos <code>class</code> e <code>style</code> são um pouco mais inteligentes e os valores podem ser mesclados, tornando o valor final: <code>form-control date-picker-theme-dark</code>.</p>
 <h2 id="Eventos-Personalizados"><a href="#Eventos-Personalizados" class="headerlink" title="Eventos Personalizados"></a>Eventos Personalizados</h2><p>Nós aprendemos que o pai pode passar dados para o filho usando propriedades, mas como nós comunicamos de volta para o pai quando alguma coisa acontece? É aí que o sistema de eventos personalizados do Vue entra.</p>
 <h3 id="Usando-v-on-com-Eventos-Personalizados"><a href="#Usando-v-on-com-Eventos-Personalizados" class="headerlink" title="Usando v-on com Eventos Personalizados"></a>Usando <code>v-on</code> com Eventos Personalizados</h3><p>Toda instância Vue implementa uma <a href="../api/#Instance-Methods-Events">interface de eventos</a>, o que significa que ela pode:</p>
 <ul>
@@ -870,7 +891,7 @@ new Vue({
 </ul>
 <p>Vamos vê-lo em ação com um input monetário muito simples:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">currency-input</span> <span class="attr">v-model</span>=<span class="string">"price"</span>&gt;</span><span class="tag">&lt;/<span class="name">currency-input</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'currency-input'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">`</span></div><div class="line">    &lt;span&gt;</div><div class="line">      $</div><div class="line">      &lt;input</div><div class="line">        ref="input"</div><div class="line">        v-bind:value="value"</div><div class="line">        v-on:input="updateValue($event.target.value)"&gt;</div><div class="line">    &lt;/span&gt;</div><div class="line">  `,</div><div class="line">  <span class="attr">props</span>: [<span class="string">'value'</span>],</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="comment">// Em vez de atualizar o valor diretamente, este</span></div><div class="line">    <span class="comment">// método é usado para formatar e colocar restrições</span></div><div class="line">    <span class="comment">// no valor do input</span></div><div class="line">    updateValue: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> formattedValue = value</div><div class="line">        <span class="comment">// Remove espaços em branco de ambos os lados</span></div><div class="line">        .trim()</div><div class="line">        <span class="comment">// Reduz para 2 casas decimais</span></div><div class="line">        .slice(</div><div class="line">          <span class="number">0</span>,</div><div class="line">          value.indexOf(<span class="string">'.'</span>) === <span class="number">-1</span></div><div class="line">            ? value.length</div><div class="line">            : value.indexOf(<span class="string">'.'</span>) + <span class="number">3</span></div><div class="line">        )</div><div class="line">      <span class="comment">// Se o valor não foi normalizado ainda,</span></div><div class="line">      <span class="comment">// o substitui manualmente para acertar</span></div><div class="line">      <span class="keyword">if</span> (formattedValue !== value) &#123;</div><div class="line">        <span class="keyword">this</span>.$refs.input.value = formattedValue</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// Emite o valor do número através do evento de input</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'input'</span>, <span class="built_in">Number</span>(formattedValue))</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'currency-input'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'\</span></div><div class="line">    &lt;span&gt;\</div><div class="line">      $\</div><div class="line">      &lt;input\</div><div class="line">        ref="input"\</div><div class="line">        v-bind:value="value"\</div><div class="line">        v-on:input="updateValue($event.target.value)"&gt;\</div><div class="line">    &lt;/span&gt;\</div><div class="line">  ',</div><div class="line">  <span class="attr">props</span>: [<span class="string">'value'</span>],</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="comment">// Em vez de atualizar o valor diretamente, este</span></div><div class="line">    <span class="comment">// método é usado para formatar e colocar restrições</span></div><div class="line">    <span class="comment">// no valor do input</span></div><div class="line">    updateValue: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> formattedValue = value</div><div class="line">        <span class="comment">// Remove espaços em branco de ambos os lados</span></div><div class="line">        .trim()</div><div class="line">        <span class="comment">// Reduz para 2 casas decimais</span></div><div class="line">        .slice(</div><div class="line">          <span class="number">0</span>,</div><div class="line">          value.indexOf(<span class="string">'.'</span>) === <span class="number">-1</span></div><div class="line">            ? value.length</div><div class="line">            : value.indexOf(<span class="string">'.'</span>) + <span class="number">3</span></div><div class="line">        )</div><div class="line">      <span class="comment">// Se o valor não foi normalizado ainda,</span></div><div class="line">      <span class="comment">// o substitui manualmente para acertar</span></div><div class="line">      <span class="keyword">if</span> (formattedValue !== value) &#123;</div><div class="line">        <span class="keyword">this</span>.$refs.input.value = formattedValue</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// Emite o valor do número através do evento de input</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'input'</span>, <span class="built_in">Number</span>(formattedValue))</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="currency-input-example" class="demo">
   <currency-input v-model="price"></currency-input>
@@ -975,7 +996,7 @@ new Vue({
 <p>Um slot escopo é um tipo especial de slot que funciona como um <em>template</em> reusável (em que podemos passar dados para ele) em vez de elementos já renderizados.</p>
 <p>Em um componente filho, simplesmente passe os dados para um slot como se você estivesse passando propriedades para um componente:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">slot</span> <span class="attr">text</span>=<span class="string">"olá do filho"</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>No pai, um elemento <code>&lt;template&gt;</code> com um atributo especial <code>scope</code> indica que ele é um <em>template</em> para um slot escopo. O valor do <code>scope</code> é o nome de uma variável temporária que guarda o objeto de propriedades passado do filho:</p>
+<p>No pai, um elemento <code>&lt;template&gt;</code> com um atributo especial <code>scope</code> deve existir, indicando que ele é um <em>template</em> para um <em>slot</em> com escopo. O valor do <code>scope</code> é o nome de uma variável temporária que guarda o objeto de propriedades passado do filho:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">child</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">scope</span>=<span class="string">"props"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>olá do pai<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; props.text &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">child</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Se nós renderizarmos o código acima, a saída será:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>olá do pai<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>olá do filho<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -1012,7 +1033,7 @@ new Vue({
 
 <h3 id="Componentes-Assincronos"><a href="#Componentes-Assincronos" class="headerlink" title="Componentes Assíncronos"></a>Componentes Assíncronos</h3><p>Em grandes aplicações, podemos precisar dividir o aplicativo em pedaços menores e carregar apenas o componente do servidor quando ele é realmente necessário. Para facilitar isso, o Vue permite que você defina seu componente como uma função de fábrica que resolva de forma assíncra sua definição de componente. O Vue só acionará a função de fábrica quando o componente realmente precisar ser renderizado e armazenará em <em>cache</em> o resultado para futuras re-renderizações. Por exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'async-example'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// Passa a definição do componente para a callback de resolução</span></div><div class="line">    resolve(&#123;</div><div class="line">      <span class="attr">template</span>: <span class="string">'&lt;div&gt;I am async!&lt;/div&gt;'</span></div><div class="line">    &#125;)</div><div class="line">  &#125;, <span class="number">1000</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>A função de fábrica recebe uma callback <code>resolve</code>, que deve ser chamada quando você recuperar a definição do componente do servidor. Você também pode chamar <code>reject(reason)</code> para indicar que o carregamento falhou. O <code>setTimeout</code> aqui é simplesmente para demonstração; Como recuperar o componente está totalmente por sua conta. Uma abordagem recomendada é usar componentes assíncronos juntos com a <a href="https://webpack.js.org/guides/code-splitting-require/" target="_blank" rel="external">função de divisão de código do Webpack</a>:</p>
+<p>A função de fábrica recebe uma <em>callback</em> <code>resolve</code>, que deve ser chamada quando você recuperar a definição do componente do servidor. Você também pode chamar <code>reject(reason)</code> para indicar que o carregamento falhou. O <code>setTimeout</code> aqui é simplesmente para demonstração; Como recuperar o componente está totalmente por sua conta. Uma abordagem recomendada é usar componentes assíncronos juntamente com a <a href="https://webpack.js.org/guides/code-splitting/" target="_blank" rel="external">função de divisão de código do Webpack</a>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'async-webpack-example'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</div><div class="line">  <span class="comment">// Essa sintaxe especial instruirá o Webpack a</span></div><div class="line">  <span class="comment">// automaticamente dividir seu código compilado em</span></div><div class="line">  <span class="comment">// pacotes que são carregados por requisições Ajax.</span></div><div class="line">  <span class="built_in">require</span>([<span class="string">'./my-async-component'</span>], resolve)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Você também pode retornar uma <code>Promise</code> na função de fábrica, então com a sintaxe do Webpack 2 + ES2015 você pode fazer:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(</div><div class="line">  <span class="string">'async-webpack-example'</span>,</div><div class="line">  () =&gt; <span class="keyword">import</span>(<span class="string">'./my-async-component'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
