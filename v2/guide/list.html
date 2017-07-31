@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/list.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/list.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/list.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/list.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/list.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/list.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/list.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Renderização de Listas — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/list.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -731,16 +739,16 @@ new Vue({ el: '#range' })
 <p>Em 2.2.0+, ao usar <code>v-for</code> com um componente, o atributo <a href="list.html#key"><code>key</code></a> é agora obrigatório.</p>
 </blockquote>
 <p>Entretanto, isto não passa automaticamente qualquer dado ao componente, uma vez que componentes possuem escopos isolados independentes. Para passar dados iterados ao componente, precisamos utilizar a sintaxe de propriedades:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span></span></div><div class="line">  <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span></div><div class="line">  <span class="attr">v-bind:item</span>=<span class="string">"item"</span></div><div class="line">  <span class="attr">v-bind:index</span>=<span class="string">"index"</span></div><div class="line">  <span class="attr">v-bind:key</span>=<span class="string">"item.id"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span></span></div><div class="line">  <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span></div><div class="line">  <span class="attr">v-bind:item</span>=<span class="string">"item"</span></div><div class="line">  <span class="attr">v-bind:index</span>=<span class="string">"index"</span></div><div class="line">  <span class="attr">v-bind:key</span>=<span class="string">"item.id"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>A razão pela qual <code>item</code> não é injetado automaticamente no componente é que isto o tornaria fortemente acoplado à funcionalidade do <code>v-for</code>. Ao ser explícito sobre a origem dos dados, garante-se que o componente seja reutilizável em outras situações.</p>
 <p>Aqui está um exemplo completo com uma lista de tarefas simples:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"todo-list-example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span></span></div><div class="line">    <span class="attr">v-model</span>=<span class="string">"newTodoText"</span></div><div class="line">    <span class="attr">v-on:keyup.enter</span>=<span class="string">"addNewTodo"</span></div><div class="line">    <span class="attr">placeholder</span>=<span class="string">"O que precisa ser feito?"</span></div><div class="line">  &gt;</div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span></span></div><div class="line">      <span class="attr">is</span>=<span class="string">"todo-item"</span></div><div class="line">      <span class="attr">v-for</span>=<span class="string">"(todo, index) in todos"</span></div><div class="line">      <span class="attr">v-bind:key</span>=<span class="string">"index"</span></div><div class="line">      <span class="attr">v-bind:title</span>=<span class="string">"todo"</span></div><div class="line">      <span class="attr">v-on:remove</span>=<span class="string">"todos.splice(index, 1)"</span></div><div class="line">    &gt;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'todo-item'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'\</span></div><div class="line">    &lt;li&gt;\</div><div class="line">      &#123;&#123; title &#125;&#125;\</div><div class="line">      &lt;button v-on:click="$emit(\'remove\')"&gt;X&lt;/button&gt;\</div><div class="line">    &lt;/li&gt;\</div><div class="line">  ',</div><div class="line">  <span class="attr">props</span>: [<span class="string">'title'</span>]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#todo-list-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">newTodoText</span>: <span class="string">''</span>,</div><div class="line">    <span class="attr">todos</span>: [</div><div class="line">      <span class="string">'Lavar os pratos'</span>,</div><div class="line">      <span class="string">'Tirar o lixo'</span>,</div><div class="line">      <span class="string">'Cortar a grama'</span></div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">addNewTodo</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.todos.push(<span class="keyword">this</span>.newTodoText)</div><div class="line">      <span class="keyword">this</span>.newTodoText = <span class="string">''</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"todo-list-example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span></span></div><div class="line">    <span class="attr">v-model</span>=<span class="string">"newTodoText"</span></div><div class="line">    <span class="attr">v-on:keyup.enter</span>=<span class="string">"addNewTodo"</span></div><div class="line">    <span class="attr">placeholder</span>=<span class="string">"O que precisa ser feito?"</span></div><div class="line">  &gt;</div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span></span></div><div class="line">      <span class="attr">is</span>=<span class="string">"todo-item"</span></div><div class="line">      <span class="attr">v-for</span>=<span class="string">"(todo, index) in todos"</span></div><div class="line">      <span class="attr">v-bind:key</span>=<span class="string">"todo.id"</span></div><div class="line">      <span class="attr">v-bind:title</span>=<span class="string">"todo.title"</span></div><div class="line">      <span class="attr">v-on:remove</span>=<span class="string">"todos.splice(index, 1)"</span></div><div class="line">    &gt;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'todo-item'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'\</span></div><div class="line">    &lt;li&gt;\</div><div class="line">      &#123;&#123; title &#125;&#125;\</div><div class="line">      &lt;button v-on:click="$emit(\'remove\')"&gt;X&lt;/button&gt;\</div><div class="line">    &lt;/li&gt;\</div><div class="line">  ',</div><div class="line">  <span class="attr">props</span>: [<span class="string">'title'</span>]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#todo-list-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">newTodoText</span>: <span class="string">''</span>,</div><div class="line">    <span class="attr">todos</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">title</span>: <span class="string">'Lavar os pratos'</span>,</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">2</span>,</div><div class="line">        <span class="attr">title</span>: <span class="string">'Tirar o lixo'</span>,</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">3</span>,</div><div class="line">        <span class="attr">title</span>: <span class="string">'Cortar a grama'</span></div><div class="line">      &#125;</div><div class="line">    ],</div><div class="line">    <span class="attr">nextTodoId</span>: <span class="number">4</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">addNewTodo</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.todos.push(&#123;</div><div class="line">        <span class="attr">id</span>: <span class="keyword">this</span>.nextTodoId++,</div><div class="line">        <span class="attr">title</span>: <span class="keyword">this</span>.newTodoText</div><div class="line">      &#125;)</div><div class="line">      <span class="keyword">this</span>.newTodoText = <span class="string">''</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="todo-list-example" class="demo">
   <input v-model="newTodoText" v-on:keyup.enter="addNewTodo" placeholder="O que precisa ser feito?">
   <ul>
-    <li is="todo-item" v-for="(todo, index) in todos" v-bind:key="index" v-bind:title="todo" v-on:remove="todos.splice(index, 1)"></li>
+    <li is="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title" v-on:remove="todos.splice(index, 1)"></li>
   </ul>
 </div>
 <script>
@@ -753,19 +761,33 @@ Vue.component('todo-item', {
   ',
   props: ['title']
 })
+
 new Vue({
   el: '#todo-list-example',
   data: {
     newTodoText: '',
     todos: [
-      'Lavar os pratos',
-      'Tirar o lixo',
-      'Cortar a grama'
-    ]
+      {
+        id: 1,
+        title: 'Lavar os pratos',
+      },
+      {
+        id: 2,
+        title: 'Tirar o lixo',
+      },
+      {
+        id: 3,
+        title: 'Cortar a grama'
+      }
+    ],
+    nextTodoId: 4
   },
   methods: {
     addNewTodo: function () {
-      this.todos.push(this.newTodoText)
+      this.todos.push({
+        id: this.nextTodoId++,
+        title: this.newTodoText
+      })
       this.newTodoText = ''
     }
   }
@@ -775,7 +797,7 @@ new Vue({
 <h3 id="v-for-com-v-if"><a href="#v-for-com-v-if" class="headerlink" title="v-for com v-if"></a><code>v-for</code> com <code>v-if</code></h3><p>Quando existem no mesmo nó, <code>v-for</code> tem prioridade maior que o <code>v-if</code>. Isto significa que o <code>v-if</code> será executado a cada iteração da repetição separadamente. Isto é muito útil quando você precisa renderizar nós para apenas <em>alguns</em> itens, como abaixo: </p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span> <span class="attr">v-if</span>=<span class="string">"!todo.isComplete"</span>&gt;</span></div><div class="line">  &#123;&#123; todo &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>O código acima renderiza apenas as tarefas que não estão marcadas como completas.</p>
-<p>Se, ao invés disso, a intensão for condicionalmente ignorar a execução de todo o <em>loop</em>, você pode envolver o <code>v-if</code> em outro elemento (ou <a href="conditional.html#Grupos-Condicionais-com-lt-template-gt"><code>&lt;template&gt;</code></a>). Por exemplo:</p>
+<p>Se, ao invés disso, a intenção for condicionalmente ignorar a execução de todo o <em>loop</em>, você pode envolver o <code>v-if</code> em outro elemento (ou <a href="conditional.html#Grupos-Condicionais-com-lt-template-gt"><code>&lt;template&gt;</code></a>). Por exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">v-if</span>=<span class="string">"shouldRenderTodos"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span>&gt;</span></div><div class="line">    &#123;&#123; todo &#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="key"><a href="#key" class="headerlink" title="key"></a><code>key</code></h2><p>Quando o Vue está atualizando uma lista de elementos renderizada com <code>v-for</code>, ele usa por padrão uma estratégia de “remendar o local”. Se a ordem dos itens nos dados mudar, ao invés de mover os elementos DOM para corresponder com a ordem dos dados, Vue simplesmente atualiza cada elemento no local e garante que isso reflita o que deveria ser renderizado naquele índice em particular. Isto é similar ao comportamento de <code>track-by=&quot;$index&quot;</code> no Vue 1.x.</p>
 <p>Este padrão é eficiente, mas adequado somente <strong>quando a renderização da lista não depende de estado de componentes filhos ou estado temporário do DOM (como valores de <em>inputs</em>)</strong>.</p>

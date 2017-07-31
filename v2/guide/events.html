@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/events.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/events.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/events.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/events.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/events.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/events.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/events.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Manipulação de Eventos — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/events.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -702,7 +710,7 @@ new Vue({
 <p class="tip">A ordem importa quando estiver utilizando modificadores, pois o código relevante é gerado na mesma ordem em que forem informados. Desta forma, utilizar <code>@click.prevent.self</code> irá previnir <strong>todos os clicks</strong> inclusive em elementos filhos, enquanto <code>@click.self.prevent</code> irá previnir apenas clicks no próprio elemento.</p>
 
 <blockquote>
-<p>Novo em 2.1.4</p>
+<p>Novo em 2.1.4+</p>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- o evento click será disparado apenas uma vez --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.once</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Diferente dos outros modificadores, que são exclusivos para eventos nativos, o modificador <code>.once</code> também pode ser usado em <a href="components.html#Usando-v-on-com-Eventos-Personalizados">eventos de componentes</a>. Se você ainda não leu sobre componentes, não se preocupe com isso neste momento.</p>
@@ -742,7 +750,7 @@ new Vue({
 <p class="tip">Observe que teclas modificadoras são diferentes de teclas comuns, e quando utilizadas com eventos <code>keyup</code>, precisam estar pressionadas quando o evento é emitido. Em outras palavras, <code>keyup.ctrl</code> só vai disparar se você soltar a tecla enquanto ainda estiver segurando <code>ctrl</code>. E não irá disparar se você soltar a tecla <code>ctrl</code> sozinha.</p>
 
 <h3 id="Modificadores-de-Mouse"><a href="#Modificadores-de-Mouse" class="headerlink" title="Modificadores de Mouse"></a>Modificadores de Mouse</h3><blockquote>
-<p>Novo em 2.2.0</p>
+<p>Novo em 2.2.0+</p>
 </blockquote>
 <ul>
 <li><code>.left</code></li>

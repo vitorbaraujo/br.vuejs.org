@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/team.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/team.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/team.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/team.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/team.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/team.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/team.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Conheça a Equipe — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/team.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -633,10 +641,11 @@
     <div class="profile">
       <h3 :data-official-title="profile.title">
         {{ profile.name }}
+        <sup v-if="profile.title && titleVisible" v-html="profile.title"></sup>
       </h3>
       <dl>
         <template v-if="profile.reposOfficial">
-          <dt>Foco principal</dt>
+          <dt>Focado em</dt>
           <dd>
             <ul>
               <li v-for="repo in profile.reposOfficial">
@@ -748,7 +757,7 @@
       A equipe principal foi ordenada pela distância até você.
     </p>
 
-    <vuer-profile v-for="profile in sortedTeam" :key="profile.github" :profile="profile"></vuer-profile>
+    <vuer-profile v-for="profile in sortedTeam" :key="profile.github" :profile="profile" :title-visible="titleVisible"></vuer-profile>
   </div>
 
   <div class="team">
@@ -775,25 +784,31 @@
       Os parceiros da comunidade foram ordenados pela distância até você.
     </p>
 
-    <vuer-profile v-for="profile in sortedPartners" :key="profile.github" :profile="profile"></vuer-profile>
+    <vuer-profile v-for="profile in sortedPartners" :key="profile.github" :profile="profile" :title-visible="titleVisible"></vuer-profile>
   </div>
 </div>
 
 <script>
 (function () {
   var cityCoordsFor = {
+    'Alicante, Espanha' : [38.346543, -0.483838],
     'Annecy, França': [45.899247, 6.129384],
     'Bangalore, Índia': [12.971599, 77.594563],
-    'Bordéus, France': [44.837789, -0.579180],
+    'Bordéus, França': [44.837789, -0.579180],
+    'Bucareste, Romênia': [44.426767, 26.102538],
     'Chengtu, China': [30.572815, 104.066801],
+    'Denver, Estados Unidos': [39.739236, -104.990251],
     'Dubna, Rússia': [56.732020, 37.166897],
+    'East Lansing, Estados Unidos': [42.736979, -84.483865],
     'Hancheu, China': [30.274084, 120.155070],
     'Jersey City, Estados Unidos': [40.728157, -74.558716],
     'Kingston, Jamaica': [18.017874, -76.809904],
+    'Krasnodar, Rússia': [45.039267, 38.987221],
     'Lansing, Estados Unidos': [42.732535, -84.555535],
     'Londres, Reino Unido': [51.507351, -0.127758],
     'Lyon, França': [45.764043, 4.835659],
     'Mannheim, Alemanha': [49.487459, 8.466039],
+    'Moscou, Rússia': [55.755826, 37.617300],
     'Orlando, Estados Unidos': [28.538335, -81.379236],
     'Paris, França': [48.856614, 2.352222],
     'Seul, Coreia do Sul': [37.566535, 126.977969],
@@ -820,7 +835,8 @@
     es: 'Espanhol',
     hi: 'Hindi',
     fa: 'Persa',
-    ko: 'Coreano'
+    ko: 'Coreano',
+    ro: 'Romeno'
   }
 
   var team = [{
@@ -989,7 +1005,7 @@
     {
       name: 'Blake Newman',
       title: 'Técnico de Desempenho & Deletador de Código',
-      city: 'London, UK',
+      city: 'Londres, Reino Unido',
       languages: ['en'],
       work: {
         role: 'Engenheiro de Software',
@@ -1104,6 +1120,38 @@
       ],
       reposPersonal: [
         'weexteam/weex-vue-framework', 'into-vue'
+      ]
+    },
+    {
+      name: 'gebilaoxiong',
+      title: 'Aniquilador de Problemas',
+      city: 'Xunquim, China',
+      languages: ['zh', 'en'],
+      github: 'gebilaoxiong',
+      work: {
+        org: 'zbj.com',
+        orgUrl: 'http://www.zbj.com/'
+      },
+      reposOfficial: [
+        'vue'
+      ]
+    },
+    {
+      name: 'Andrew Tomaka',
+      title: 'O Servidor do Servidor',
+      city: 'East Lansing, Estados Unidos',
+      languages: ['en'],
+      github: 'atomaka',
+      twitter: 'atomaka',
+      reposOfficial: [
+        'vuejs/*'
+      ],
+      work: {
+        org: 'Universidade Estadual de Michigan',
+        orgUrl: 'https://msu.edu/'
+      },
+      links: [
+        'https://atomaka.com/'
       ]
     }
   ]))
@@ -1264,6 +1312,22 @@
       ]
     },
     {
+      name: 'Razvan Stoenescu',
+      title: 'Criador de Quasars do Espaço Profundo',
+      city: 'Bucareste, Romênia',
+      languages: ['ro', 'en'],
+      github: 'rstoenescu',
+      twitter: 'quasarframework',
+      work: {
+        role: 'Desenvolvedor',
+        org: 'Quasar Framework',
+        orgUrl: 'http://quasar-framework.org/'
+      },
+      reposPersonal: [
+        'quasarframework/quasar', 'quasarframework/quasar-cli', 'quasarframework/quasar-play'
+      ]
+    },
+    {
       name: 'Jilson Thomas',
       title: 'Promotor Vue e Cara do VueJobs',
       city: 'Toronto, Canadá',
@@ -1280,9 +1344,24 @@
       ]
     },
     {
+      name: 'Israel Ortuño',
+      title: 'Corsário do VueJobs',
+      city: 'Alicante, Espanha',
+      languages: ['es', 'en'],
+      github: 'IsraelOrtuno',
+      twitter: 'IsraelOrtuno',
+      work: {
+        role: 'Desenvolvedor Web Full Stack',
+        org: 'Autônomo'
+      },
+      links: [
+        'https://vuejobs.com'
+      ]
+    },
+    {
       name: 'John Leider',
       title: 'Vuepletamente Escultor de Framework',
-      city: 'Orlando, FL, USA',
+      city: 'Orlando, Estados Unidos',
       languages: ['en'],
       github: 'vuetifyjs',
       twitter: 'vuetifyjs',
@@ -1294,13 +1373,53 @@
       reposPersonal: [
         'vuetifyjs/vuetify'
       ]
+    },
+    {
+      name: 'Grigoriy Beziuk',
+      title: 'Líder de Gangue de Tradutores',
+      city: 'Moscou, Rússia',
+      languages: ['ru', 'de', 'en'],
+      github: 'gbezyuk',
+      work: {
+        role: 'Desenvolvedor Web Full Stack',
+        org: 'Autônomo',
+        orgUrl: 'http://gbezyuk.ru'
+      },
+      reposPersonal: [
+        'translation-gang/ru.vuejs.org'
+      ]
+    },
+    {
+      name: 'Alexander Sokolov',
+      title: 'Olhar Afiado da Tradução Russa',
+      city: 'Krasnodar, Rússia',
+      languages: ['ru', 'en'],
+      github: 'Alex-Sokolov',
+      reposPersonal: [
+        'translation-gang/ru.vuejs.org'
+      ]
+    },
+    {
+      name: 'Sarah Drasner',
+      city: 'Denver, Estados Unidos',
+      languages: ['en'],
+      work: {
+        role: 'Consultora'
+      },
+      github: 'sdras',
+      twitter: 'sarah_edo',
+      codepen: 'sdras',
+      reposPersonal: [
+        'intro-to-vue', 'vue-sublime-snippets', 'nuxt-type', 'animating-vue-workshop', 'vue-wine-label', 'vue-weather-notifier'
+      ]
     }
   ]
 
   Vue.component('vuer-profile', {
     template: '#vuer-profile-template',
     props: {
-      profile: Object
+      profile: Object,
+      titleVisible: Boolean
     },
     computed: {
       workHtml: function () {
@@ -1353,6 +1472,7 @@
             var language = languageNameFor[languageCode]
             if (
               languageCode !== 'en' &&
+              preferredLanguageCode &&
               languageCode === preferredLanguageCode.slice(0, 2)
             ) {
               return (
@@ -1404,7 +1524,11 @@
       isSorting: false,
       errorGettingLocation: false,
       userPosition: null,
-      useMiles: false
+      useMiles: false,
+      konami: {
+        position: 0,
+        code: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+      }
     },
     computed: {
       sortedTeam: function () {
@@ -1412,6 +1536,9 @@
       },
       sortedPartners: function () {
         return this.sortVuersByDistance(this.partners)
+      },
+      titleVisible: function () {
+        return this.konami.code.length === this.konami.position
       }
     },
     created: function () {
@@ -1425,6 +1552,10 @@
           this.useMiles = true
         }
       }
+      document.addEventListener('keydown', this.konamiKeydown)
+    },
+    beforeDestroy: function () {
+      document.removeEventListener('keydown', this.konamiKeydown)
     },
     methods: {
       getUserPosition: function () {
@@ -1466,6 +1597,15 @@
           )
         })
         return vuersWithDistances
+      },
+      konamiKeydown: function (event) {
+        if (this.titleVisible) {
+          return
+        }
+
+        if (event.keyCode !== this.konami.code[this.konami.position++]) {
+          this.konami.position = 0
+        }
       }
     }
   })

@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/custom-directive.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/custom-directive.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/custom-directive.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/custom-directive.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/custom-directive.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/custom-directive.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/custom-directive.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Diretivas Personalizadas — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/custom-directive.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -622,7 +630,7 @@
     
       <h1>Diretivas Personalizadas</h1>
     
-    <h2 id="Introducao"><a href="#Introducao" class="headerlink" title="Introdução"></a>Introdução</h2><p>Adicionalmente ao conjunto de diretivas incluídas no core, o Vue lhe permite registrar suas próprias diretivas personalizadas. Note que no Vue 2.0, a forma primária de abstração e reuso de código são componentes, no entanto, pode haver casos em que você só precisa de um acesso de baixo nível ao DOM em elementos simples, e aí diretivas personalizadas seriam úteis.<br>Um exemplo seria dar o foco a uma elemento input como este:</p>
+    <h2 id="Introducao"><a href="#Introducao" class="headerlink" title="Introdução"></a>Introdução</h2><p>Adicionalmente ao conjunto de diretivas incluídas em seu núcleo, Vue permite registrar suas próprias diretivas personalizadas. Note que no Vue 2.0+, a forma primária de abstração e reuso de código são componentes, no entanto, pode haver casos em que você só precisa de um acesso de baixo nível ao DOM em elementos simples, e aí diretivas personalizadas seriam úteis. Um exemplo seria colocar o foco a um elemento <em>input</em> como este:</p>
 
 <div id="simplest-directive-example" class="demo">
   <input v-focus="">
@@ -638,46 +646,46 @@ new Vue({
 })
 </script>
 
-<p>Quando a página carrega, o elemento ganha o foco. Na verdade, se você ainda não clicou em nada desde que visitou esta página, o input acima deverá estar com o foco. Agora vamos construir a diretiva que faz isso:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Register a global custom directive called v-focus</span></div><div class="line">Vue.directive(<span class="string">'focus'</span>, &#123;</div><div class="line">  <span class="comment">// When the bound element is inserted into the DOM...</span></div><div class="line">  inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">    <span class="comment">// Focus the element</span></div><div class="line">    el.focus()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Quando a página carrega, o elemento ganha o foco. Na verdade, se você ainda não clicou em nada desde que visitou esta página do guia, o <em>input</em> acima deverá estar com o foco. Agora vamos construir esta diretiva:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Registra a diretiva personalizada global chamada v-focus</span></div><div class="line">Vue.directive(<span class="string">'focus'</span>, &#123;</div><div class="line">  <span class="comment">// Quando o elemento vinculado é inserido no DOM...</span></div><div class="line">  inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">    <span class="comment">// Coloque o foco no elemento</span></div><div class="line">    el.focus()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Se você deseja registrar uma diretiva localmente em vez disso, os componentes também aceitam uma opção <code>directives</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">directives: &#123;</div><div class="line">  <span class="attr">focus</span>: &#123;</div><div class="line">    <span class="comment">// directive definition</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Então, em um template você pode usar o novo atributo <code>v-focus</code> em qualquer elemento, como isto:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">directives: &#123;</div><div class="line">  <span class="attr">focus</span>: &#123;</div><div class="line">    <span class="comment">// Definição da diretiva</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Então, em um <em>template</em> você pode usar o novo atributo <code>v-focus</code> para qualquer elemento, por exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-focus</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Funcoes-Hook"><a href="#Funcoes-Hook" class="headerlink" title="Funções Hook"></a>Funções Hook</h2><p>Um objeto de definição de diretiva pode prover algumas funções Hook (todas opcionais):</p>
+<h2 id="Funcoes-de-Gatilhos"><a href="#Funcoes-de-Gatilhos" class="headerlink" title="Funções de Gatilhos"></a>Funções de Gatilhos</h2><p>Um objeto de definição de diretiva pode prover algumas funções de gatilhos (todas opcionais):</p>
 <ul>
-<li><p><code>bind</code>: chamada apenas uma vez, quando a directiva é ligada pela primeira vez ao elemento. Aí é onde você pode fazer o trabalho de configuração uma vez.</p>
+<li><p><code>bind</code>: chamada apenas uma vez, quando a directiva é interligada pela primeira vez ao elemento. Aí é onde você pode fazer o trabalho de configuração inicial.</p>
 </li>
-<li><p><code>inserted</code>: chamada quando o elemento foi inserido no nó pai(isso apenas garante a presença no nó pai, não necessariamente no documento).</p>
+<li><p><code>inserted</code>: chamada quando o elemento for inserido no nó pai (garante a presença no nó pai, mas não necessariamente no documento).</p>
 </li>
-<li><p><code>update</code>: chamada após a atualização do componente container, <strong>mas possivelmente antes da atualização de seus filhos</strong>. O valor da diretiva pode ou não ter mudado, mas você pode ignorar atualizações desnecessárias, comparando os valores atuais e os antigos da vinculação (veja abaixo em hook arguments).</p>
+<li><p><code>update</code>: chamada após a atualização do VNode que contém o componente, <strong>mas possivelmente antes da atualização de seus filhos</strong>. O valor da diretiva pode ou não ter mudado, mas você pode evitar atualizações desnecessárias comparando os valores atuais com os antigos (veja abaixo, em argumentos dos gatilhos).</p>
 </li>
-<li><p><code>componentUpdated</code>: chamada após a atualização do componente container <strong>e seus filhos</strong>.</p>
+<li><p><code>componentUpdated</code>: chamada após a atualização do Vnode que contém o componente, <strong>inclusive de seus filhos</strong>.</p>
 </li>
 <li><p><code>unbind</code>: chamada somente uma vez, quando a diretiva é desvinculada do elemento.</p>
 </li>
 </ul>
-<p>Iremos explorar os argumentos passados nessas funções hook (<code>el</code>, <code>binding</code>, <code>vnode</code>, e <code>oldVnode</code>) na próxima seção.</p>
-<h2 id="Argumentos-das-funcoes-Hook-das-diretivas"><a href="#Argumentos-das-funcoes-Hook-das-diretivas" class="headerlink" title="Argumentos das funções Hook das diretivas"></a>Argumentos das funções Hook das diretivas</h2><p>Os seguintes argumentos são passados nas funções hooks das diretivas</p>
+<p>Iremos a seguir explorar os argumentos que podem ser passados nessas funções de gatilho (<code>el</code>, <code>binding</code>, <code>vnode</code>, e <code>oldVnode</code>).</p>
+<h2 id="Argumentos-nos-Gatilhos"><a href="#Argumentos-nos-Gatilhos" class="headerlink" title="Argumentos nos Gatilhos"></a>Argumentos nos Gatilhos</h2><p>Os seguintes argumentos são esperados nas funções de gatilho das diretivas:</p>
 <ul>
 <li><strong>el</strong>: O elemento a que a diretiva está vinculada. Isso pode ser usado para manipular o DOM diretamente.</li>
-<li><strong>binding</strong>: Um objeto contendo as seguintes propriedades.<ul>
+<li><strong>binding</strong>: Um objeto contendo as seguintes propriedades:<ul>
 <li><strong>name</strong>: O nome da diretiva, sem o prefixo <code>v-</code>.</li>
 <li><strong>value</strong>: O valor passado para a diretiva. Por exemplo em <code>v-my-directive=&quot;1 + 1&quot;</code>, o valor passado é <code>2</code>.</li>
-<li><strong>oldValue</strong>: O valor anterior, somente disponível em <code>update</code> e <code>componentUpdated</code>. Está presente se o valor foi alterado ou não.</li>
+<li><strong>oldValue</strong>: O valor anterior, somente disponível em <code>update</code> e <code>componentUpdated</code>. Está presente tanto se o valor foi alterado quanto não alterado.</li>
 <li><strong>expression</strong>: A expressão de vinculação como uma string. Por exemplo em <code>v-my-directive=&quot;1 + 1&quot;</code>, a expressão seria <code>&quot;1 + 1&quot;</code>.</li>
-<li><strong>arg</strong>: O argumento passado para a diretiva, se algum. Por exemplo em <code>v-my-directive:foo</code>, o argumento seria <code>&quot;foo&quot;</code>.</li>
-<li><strong>modifiers</strong>: Um objeto contendo modificadores, se algum. Por exemplo em <code>v-my-directive.foo.bar</code>, o objeto seria <code>{ foo: true, bar: true }</code>.</li>
+<li><strong>arg</strong>: O argumento passado para a diretiva, se houver algum. Por exemplo em <code>v-my-directive:foo</code>, o argumento seria <code>&quot;foo&quot;</code>.</li>
+<li><strong>modifiers</strong>: Um objeto contendo modificadores, se houver algum. Por exemplo em <code>v-my-directive.foo.bar</code>, o objeto seria <code>{ foo: true, bar: true }</code>.</li>
 </ul>
 </li>
 <li><strong>vnode</strong>: O nó virtual produzido pelo compilador do Vue. Veja <a href="/api/#VNode-Interface">VNode API</a> para mais detalhes.</li>
-<li><strong>oldVnode</strong>: O nó virtual anterior, somente disponível em hooks <code>update</code> e <code>componentUpdated</code>.</li>
+<li><strong>oldVnode</strong>: O nó virtual anterior, somente disponível em <code>update</code> e <code>componentUpdated</code>.</li>
 </ul>
-<p class="tip">Tirando <code>el</code>, você deve tratar esses argumentos como <strong>somente leitura</strong> e nunca modificá-los. Se você precisa compartilhar informações entre hooks, é aconselhável fazê-lo através do elemento <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external">dataset</a>.</p>
+<p class="tip">Exceto <code>el</code>, você deve tratar os outros argumentos como <strong>somente leitura</strong> e nunca modificá-los. Se você precisar compartilhar informações entre gatilhos, é aconselhável utilizar um atributo <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external">dataset</a>.</p>
 
-<p>Um exemplo de diretiva personalizada utilizando algumas dessas propriedades:</p>
+<p>Eis um exemplo de diretiva personalizada utilizando algumas dessas propriedades:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hook-arguments-example"</span> <span class="attr">v-demo:foo.a.b</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, &#123;</div><div class="line">  <span class="attr">bind</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> s = <span class="built_in">JSON</span>.stringify</div><div class="line">    el.innerHTML =</div><div class="line">      <span class="string">'name: '</span>       + s(binding.name) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'value: '</span>      + s(binding.value) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'expression: '</span> + s(binding.expression) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'argument: '</span>   + s(binding.arg) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'modifiers: '</span>  + s(binding.modifiers) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'vnode keys: '</span> + <span class="built_in">Object</span>.keys(vnode).join(<span class="string">', '</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#hook-arguments-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">message</span>: <span class="string">'hello!'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, &#123;</div><div class="line">  <span class="attr">bind</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> s = <span class="built_in">JSON</span>.stringify</div><div class="line">    el.innerHTML =</div><div class="line">      <span class="string">'name: '</span>       + s(binding.name) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'value: '</span>      + s(binding.value) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'expression: '</span> + s(binding.expression) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'argument: '</span>   + s(binding.arg) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'modifiers: '</span>  + s(binding.modifiers) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'vnode keys: '</span> + <span class="built_in">Object</span>.keys(vnode).join(<span class="string">', '</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#hook-arguments-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">message</span>: <span class="string">'Olá!'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="hook-arguments-example" v-demo:foo.a.b="message" class="demo"></div>
 <script>
@@ -696,16 +704,16 @@ Vue.directive('demo', {
 new Vue({
   el: '#hook-arguments-example',
   data: {
-    message: 'hello!'
+    message: 'Olá!'
   }
 })
 </script>
 
-<h2 id="Forma-Abreviada-de-Funcoes"><a href="#Forma-Abreviada-de-Funcoes" class="headerlink" title="Forma Abreviada de Funções"></a>Forma Abreviada de Funções</h2><p>Em muitos casos, você pode querer ter o mesmo comportamento em <code>bind</code> e <code>update</code>, mas sem se importar com outros hooks. Por exemplo:</p>
+<h2 id="Forma-Abreviada-de-Funcoes"><a href="#Forma-Abreviada-de-Funcoes" class="headerlink" title="Forma Abreviada de Funções"></a>Forma Abreviada de Funções</h2><p>Em muitos casos, você pode querer ter o mesmo comportamento nos gatilhos <code>bind</code> e <code>update</code>, e não se importar com os outros gatilhos. Por exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'color-swatch'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  el.style.backgroundColor = binding.value</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Objetos-Literais"><a href="#Objetos-Literais" class="headerlink" title="Objetos Literais"></a>Objetos Literais</h2><p>Se sua diretiva precisa de múltiplos valores, você pode passados em um objeto literal JavaScript. Lembre-se de que as diretivas podem ter qualquer objeto JavaScript válido.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-demo</span>=<span class="string">"&#123; color: 'white', text: 'hello!' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(binding.value.color) <span class="comment">// =&gt; "white"</span></div><div class="line">  <span class="built_in">console</span>.log(binding.value.text)  <span class="comment">// =&gt; "hello!"</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="Objetos-Literais"><a href="#Objetos-Literais" class="headerlink" title="Objetos Literais"></a>Objetos Literais</h2><p>Se sua diretiva precisa de múltiplos valores, você pode passá-los em um objeto literal JavaScript. Lembre-se que as diretivas podem ter qualquer objeto JavaScript válido.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-demo</span>=<span class="string">"&#123; color: 'white', text: 'Olá!' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(binding.value.color) <span class="comment">// =&gt; "white"</span></div><div class="line">  <span class="built_in">console</span>.log(binding.value.text)  <span class="comment">// =&gt; "Olá!"</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
     
       <div class="guide-links">

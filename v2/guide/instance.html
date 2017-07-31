@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/instance.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/instance.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/instance.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/instance.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/instance.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/instance.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/instance.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="A Instância Vue — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/instance.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -622,21 +630,21 @@
     
       <h1>A Instância Vue</h1>
     
-    <h2 id="Construtor"><a href="#Construtor" class="headerlink" title="Construtor"></a>Construtor</h2><p>Todo objeto <code>vm</code> é iniciado através de uma <strong>instância raiz do Vue</strong> com a função construtora:</p>
+    <h2 id="Construtor"><a href="#Construtor" class="headerlink" title="Construtor"></a>Construtor</h2><p>Toda aplicação Vue é inicializada através da criação de uma <strong>instância raiz do Vue</strong> com a função construtora <code>Vue</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// opções</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Embora não seja estritamente associado com o <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="external">padrão MVVM</a>, o <em>design</em> do Vue foi sem dúvida inspirado por ele. Como convenção, muitas vezes usamos a variável <code>vm</code> (abreviação de <em>ViewModel</em>) para se referir à instância Vue.</p>
-<p>Quando você cria uma instância, é necessário passar um <strong>objeto</strong> que contém opções para dados, elementos, métodos, ciclos de vida, dentre outros. A lista completa de opções pode ser encontrada na <a href="/api">API</a>.</p>
+<p>Embora não seja estritamente associado com o <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="external">padrão MVVM</a>, o <em>design</em> do Vue foi parcialmente inspirado por ele. Como convenção, muitas vezes usamos a variável <code>vm</code> (abreviação de <em>ViewModel</em>) para se referir à instância Vue.</p>
+<p>Quando você cria uma instância, é necessário passar um <strong>objeto de opções</strong> que contém opções para dados, <em>template</em>, elementos, métodos, gatilhos de ciclo de vida, dentre outros. A lista completa de opções pode ser encontrada na <a href="../api/#Options-Data">API</a>.</p>
 <p>O construtor <code>Vue</code> pode ser estendido para a criação de <strong>contrutores de componentes</strong> reutilizáveis com opções pré-definidas:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> MyComponent = Vue.extend(&#123;</div><div class="line">  <span class="comment">// opções da extensão</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// todas as instâncias de `MyComponent` são criadas</span></div><div class="line"><span class="comment">// com as definições pré definidas pelas opções</span></div><div class="line"><span class="keyword">var</span> myComponentInstance = <span class="keyword">new</span> MyComponent()</div></pre></td></tr></table></figure>
 <p>Embora seja possível criar instâncias repetidamente, na maioria das vezes é recomendado compô-las declarativamente em <em>templates</em> com elementos personalizados. Vamos falar sobre <a href="components.html">o sistema de componentes</a> com mais detalhes depois. Por enquanto, você precisa apenas saber que todos os componentes Vue são essencialmente extensões da instância Vue.</p>
 <h2 id="Propriedades-e-Metodos"><a href="#Propriedades-e-Metodos" class="headerlink" title="Propriedades e Métodos"></a>Propriedades e Métodos</h2><p>Cada instância Vue conecta todas as propriedades encontradas no objeto <code>data</code>.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: data</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.a === data.a <span class="comment">// -&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// atribuindo à propriedade também afeta os dados originais</span></div><div class="line">vm.a = <span class="number">2</span></div><div class="line">data.a <span class="comment">// -&gt; 2</span></div><div class="line"></div><div class="line"><span class="comment">// ... e vice-versa</span></div><div class="line">data.a = <span class="number">3</span></div><div class="line">vm.a <span class="comment">// -&gt; 3</span></div></pre></td></tr></table></figure>
-<p>Deve-se notar que somente estas propriedades relacionadas são <strong>reativas</strong>. Se você definir uma nova propriedade para a instância após ela ser criada, ela não irá provocar nenhuma atualização na <em>view</em>. Vamos discutir o sistema de reatividade em detalhes mais tarde.</p>
+<p>Deve-se notar que somente estas propriedades relacionadas são <strong>reativas</strong>, ou seja, qualquer modificação em seus valores irá disparar uma atualização na <em>view</em>. Se você definir uma nova propriedade a uma instância após ela ter sido criada, não haverá atualizações reativas para ela. Vamos discutir o sistema de reatividade em detalhes mais tarde.</p>
 <p>Além das propriedade <code>data</code>, a instância Vue expõe uma variedade de propriedades e métodos muito úteis. Estas propriedades e métodos são prefixadas com <code>$</code> para se diferenciar das propriedades que foram definidas pelo desenvolvedor. Por exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#example'</span>,</div><div class="line">  <span class="attr">data</span>: data</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.$data === data <span class="comment">// -&gt; true</span></div><div class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// -&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// $watch é um método da instância</span></div><div class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</div><div class="line">  <span class="comment">// este callback será chamado quando `vm.a` mudar</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p class="tip"><br>Não utilize <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="external">arrow functions</a> em uma propriedade de instância ou <em>callback</em> (ex: <code>vm.$watch(&#39;a&#39;, (newVal, oldVal) =&gt; this.myMethod())</code>). Como as <em>arrow functions</em> são vinculadas ao contexto pai, o <code>this</code> não representará a instância Vue como você espera, ou seja, <code>this.myMethod</code> estará indefinida.<br></p>
 
-<p>Consulte a <a href="../api">API</a> para a lista completa de propriedades e métodos.</p>
+<p>Consulte a <a href="../api/#Instance-Properties">API</a> para a lista completa de propriedades e métodos da instância.</p>
 <h2 id="Ciclo-de-Vida-da-Instancia"><a href="#Ciclo-de-Vida-da-Instancia" class="headerlink" title="Ciclo de Vida da Instância"></a>Ciclo de Vida da Instância</h2><p>Cada instância Vue passa por uma série de etapas em sua inicialização - por exemplo, é necessário configurar o observador do <code>data</code>, compilar o <em>template</em>, montar a instância no DOM, atualizar o DOM quando os dados forem alterados.</p>
 <p>Ao longo do caminho, Vue irá também invocar alguns <strong>gatilhos de ciclo-de-vida</strong>, nos quais você terá oportunidade de executar uma lógicas personalizadas. Por exemplo, <code>created</code> é chamado após a instancia do Vue ser criada:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">a</span>: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// `this` aponta para a instância vm</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'a é '</span> + <span class="keyword">this</span>.a)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// -&gt; "a é 1"</span></div></pre></td></tr></table></figure>

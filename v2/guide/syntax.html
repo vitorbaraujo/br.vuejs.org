@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/syntax.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/syntax.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/syntax.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/syntax.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/syntax.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/syntax.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/syntax.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Sintaxe de Templates — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/syntax.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -659,15 +667,16 @@
 <p>Veremos mais casos de uso de modificadores quando explorarmos mais <code>v-on</code> e <code>v-model</code>.</p>
 <h3 id="Filtros"><a href="#Filtros" class="headerlink" title="Filtros"></a>Filtros</h3><p>O Vue.js permite que se defina filtros utilizáveis para aplicar formatações em textos. Filtros são permitidos em dois lugares: <strong>interpolações de chaves duplas ou expressões <code>v-bind</code></strong>. Filtros devem ser acrescidos ao final de uma expressão JavaScript, denotados pelo símbolo <em>“pipe”</em>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- em chaves duplas --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- em v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p class="tip">Filtros no Vue 2.x podem ser utilizados somente em interpolações <em>mustache</em> e expressões <code>v-bind</code> (estas suportadas desde 2.1.0), pois foram projetados com o propósito de formatações textuais comuns. Cenários mais complexos de transformações em outras diretivas dependem de <a href="/guide/computed.html">dados Computados</a>, e não filtros.</p>
+<p class="tip">Filtros no Vue 2.x podem ser utilizados somente em interpolações <em>mustache</em> e expressões <code>v-bind</code> (estas suportadas em 2.1.0+), pois foram projetados com o propósito de formatações textuais comuns. Cenários mais complexos de transformações em outras diretivas dependem de <a href="/guide/computed.html">dados computados</a>, e não filtros.</p>
 
-<p>A função de filtro sempre recebe o valor da expressão como o primeiro parâmetro.</p>
+<p>A função de filtro sempre recebe o valor da expressão (o resultado da cadeia até aquele momento) como o primeiro parâmetro. Neste exemplo, a função do filtro <code>capitalize</code> irá receber o valor de <code>message</code> como seu argumento.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  filters: &#123;</div><div class="line">    <span class="attr">capitalize</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">      value = value.toString()</div><div class="line">      <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Filtros podem ser encadeados:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</div></pre></td></tr></table></figure>
+<p>Neste caso, <code>filterA</code>, definido com um argumento simples, irá receber o valor de <code>message</code>, e então o filtro <code>filterB</code> irá calcular a partir do resultado de <code>filterA</code> passado como um argumento simples para <code>filterB</code>.</p>
 <p>Filtros são funções Javascript, então eles podem aceitar parâmetros:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('arg1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
-<p>Aqui, a String literal <code>&#39;arg1&#39;</code> será passada para o filtro como o segundo parâmetro, e o valor da expressão <code>arg2</code> será calculado e passado como terceiro parâmetro.</p>
+<p>Neste exemplo <code>filterA</code> é definido com uma função recebendo dois argumentos. O valor de <code>message</code> será seu primeiro argumento. O literal textual <code>&#39;arg1&#39;</code> será o segundo argumento e o valor da expressão <code>arg2</code> será calculado e seu resultado passado como terceiro parâmetro.</p>
 <h2 id="Abreviacoes"><a href="#Abreviacoes" class="headerlink" title="Abreviações"></a>Abreviações</h2><p>O prefixo <code>v-</code> serve como dica visual para identificar atributos específicos do Vue nos <em>templates</em>. Isso é útil quando se está utilizando o Vue para aplicar comportamento dinâmico em HTML existente, mas você pode achar um pouco verboso se precisar usar frequentemente. Em casos como no desenvolvimento de uma <a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="external">SPA</a>, o uso desse prefixo é menos importante, já que o Vue efetivamente gerencia todos os <em>templates</em>. Assim, podemos utilizar abreviações especiais para as duas diretivas mais utilizadas, que são o <code>v-bind</code> e o <code>v-on</code>:</p>
 <h3 id="Abreviacao-para-v-bind"><a href="#Abreviacao-para-v-bind" class="headerlink" title="Abreviação para v-bind"></a>Abreviação para <code>v-bind</code></h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- sintaxe completa --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- abreviação --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="Abreviacao-para-v-on"><a href="#Abreviacao-para-v-on" class="headerlink" title="Abreviação para v-on"></a>Abreviação para <code>v-on</code></h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- sintaxe completa --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- abreviação --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>

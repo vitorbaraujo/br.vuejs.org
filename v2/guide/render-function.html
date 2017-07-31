@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/render-function.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/render-function.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/render-function.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/render-function.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/render-function.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/render-function.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/render-function.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Funções de Renderização — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/render-function.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -628,7 +636,7 @@
 <p>Para o código HTML acima, você decide que quer esta interface para o seu componente:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">anchored-heading</span> <span class="attr">:nivel</span>=<span class="string">"1"</span>&gt;</span>Olá Mundo!<span class="tag">&lt;/<span class="name">anchored-heading</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Quando você começar a criar o componente de modo que gere os cabeçalhos de acordo com a propriedade <code>nivel</code>, rapidamente chegará a algo assim:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-template"</span> <span class="attr">id</span>=<span class="string">"anchored-heading-template"</span>&gt;</span><span class="xml"></span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">"level === 1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-else-if</span>=<span class="string">"level === 2"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-else-if</span>=<span class="string">"level === 3"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h4</span> <span class="attr">v-else-if</span>=<span class="string">"level === 4"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span> <span class="attr">v-else-if</span>=<span class="string">"level === 5"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h6</span> <span class="attr">v-else-if</span>=<span class="string">"level === 6"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h6</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-template"</span> <span class="attr">id</span>=<span class="string">"anchored-heading-template"</span>&gt;</span><span class="xml"></span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">"nivel === 1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-else-if</span>=<span class="string">"nivel === 2"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-else-if</span>=<span class="string">"nivel === 3"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h4</span> <span class="attr">v-else-if</span>=<span class="string">"nivel === 4"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span> <span class="attr">v-else-if</span>=<span class="string">"nivel === 5"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h6</span> <span class="attr">v-else-if</span>=<span class="string">"nivel === 6"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">h6</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'#anchored-heading-template'</span>,</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">nivel</span>: &#123;</div><div class="line">      <span class="attr">type</span>: <span class="built_in">Number</span>,</div><div class="line">      <span class="attr">required</span>: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Esse <em>template</em> não está passando uma boa sensação. Não é apenas extenso, ele inclusive duplica <code>&lt;slot&gt;&lt;/slot&gt;</code> para cada nível de cabeçalho, e teríamos que fazer o mesmo ao incluirmos um elemento <code>&lt;a&gt;</code>.</p>
 <p>Enquanto <em>templates</em> funcionam muito bem para a maioria dos componentes, está claro que este caso é uma exceção. Então vamos tentar reescrevê-lo usando uma função <code>render</code>:</p>
@@ -732,7 +740,7 @@
 <p>Em casos como este, nós podemos marcar componentes como <code>functional</code>, o que significa que eles são <em>stateless</em> (sem estado, ou seja, sem <code>data</code>) e são <em>instanceless</em> (sem instância, ou seja, sem o contexto <code>this</code>). Um <strong>componente funcional</strong> tem este formato:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'meu-componente'</span>, &#123;</div><div class="line">  <span class="attr">functional</span>: <span class="literal">true</span>,</div><div class="line">  <span class="comment">// Para compensar a inexistência de uma instância,</span></div><div class="line">  <span class="comment">// é providenciado um segundo argumento: "context".</span></div><div class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Props são opcionais</span></div><div class="line">  props: &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <blockquote>
-<p>Nota: em versões &lt;=2.3.0, a opção <code>props</code> é obrigatória se você deseja aceitar propriedades em um componente funcional. Em 2.3.0+ você pode omitir <code>props</code> e todos os atributos encontrados no nó do componente serão implicitamente extraídos como propriedades.</p>
+<p>Nota: em versões anteriores a 2.3.0, a opção <code>props</code> é obrigatória se você deseja aceitar propriedades em um componente funcional. Em 2.3.0+ você pode omitir <code>props</code> e todos os atributos encontrados no nó do componente serão implicitamente extraídos como propriedades.</p>
 </blockquote>
 <p>Tudo que um componente funcional necessitar é passado através de <code>context</code>, o qual é um objeto contendo:</p>
 <ul>
@@ -745,7 +753,7 @@
 <li><code>injections</code>: (2.3.0+) Se estiver usando a opção <a href="../api/#provide-inject"><code>inject</code></a>, aqui estarão as injeções resolvidas</li>
 </ul>
 <p>Após acrescentar <code>functional: true</code>, adaptar a função <code>render</code> do nosso componente de cabeçalho com <em>link</em> iria requerer somente acrescentar o parâmetro <code>context</code>, e atualizar <code>this.$slots.default</code> para <code>context.children</code>, e por fim atualizar <code>this.level</code> para <code>context.props.level</code>.</p>
-<p>Como componentes funcionais são apenas funções, eles são muito mais leves para renderizar.</p>
+<p>Como componentes funcionais são apenas funções, eles são muito mais leves para renderizar. Entretanto, por carecer de uma instância persistente, eles não são exibidos na árvore de componentes do <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">Vue devtools</a>.</p>
 <p>Eles também são muito úteis como componentes encapsuladores. Por exemplo, quando você precisa:</p>
 <ul>
 <li>Programaticamente escolher um entre vários outros componentes para delegar</li>

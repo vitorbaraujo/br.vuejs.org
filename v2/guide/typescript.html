@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/typescript.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/typescript.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/typescript.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/typescript.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/typescript.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/typescript.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/typescript.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="TypeScript Support — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/typescript.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -622,7 +630,7 @@
     
       <h1>TypeScript Support</h1>
     
-    <h2 id="Important-2-2-Change-Notice-for-TS-webpack-2-users"><a href="#Important-2-2-Change-Notice-for-TS-webpack-2-users" class="headerlink" title="Important 2.2 Change Notice for TS + webpack 2 users"></a>Important 2.2 Change Notice for TS + webpack 2 users</h2><p>In Vue 2.2 we introduced dist files exposed as ES modules, which will be used by default by webpack 2. Unfortunately, this introduced an unintentional breaking change because with TypeScript + webpack 2, <code>import Vue = require(&#39;vue&#39;)</code> will now return a synthetic ES module object instead of Vue itself.</p>
+    <h2 id="Important-2-2-0-Change-Notice-for-TS-webpack-2-users"><a href="#Important-2-2-0-Change-Notice-for-TS-webpack-2-users" class="headerlink" title="Important 2.2.0+ Change Notice for TS + webpack 2 users"></a>Important 2.2.0+ Change Notice for TS + webpack 2 users</h2><p>In Vue 2.2.0+ we introduced dist files exposed as ES modules, which will be used by default by webpack 2. Unfortunately, this introduced an unintentional breaking change because with TypeScript + webpack 2, <code>import Vue = require(&#39;vue&#39;)</code> will now return a synthetic ES module object instead of Vue itself.</p>
 <p>We plan to move all official declarations to use ES-style exports in the future. Please see <a href="#Recommended-Configuration">Recommended Configuration</a> below on a future-proof setup.</p>
 <h2 id="Official-Declaration-in-NPM-Packages"><a href="#Official-Declaration-in-NPM-Packages" class="headerlink" title="Official Declaration in NPM Packages"></a>Official Declaration in NPM Packages</h2><p>A static type system can help prevent many potential runtime errors, especially as applications grow. That’s why Vue ships with <a href="https://github.com/vuejs/vue/tree/dev/types" target="_blank" rel="external">official type declarations</a> for <a href="https://www.typescriptlang.org/" target="_blank" rel="external">TypeScript</a> - not only in Vue core, but also for <a href="https://github.com/vuejs/vue-router/tree/dev/types" target="_blank" rel="external">vue-router</a> and <a href="https://github.com/vuejs/vuex/tree/dev/types" target="_blank" rel="external">vuex</a> as well.</p>
 <p>Since these are <a href="https://unpkg.com/vue/types/" target="_blank" rel="external">published on NPM</a>, and the latest TypeScript knows how to resolve type declarations in NPM packages, this means when installed via NPM, you don’t need any additional tooling to use TypeScript with Vue.</p>
@@ -650,6 +658,15 @@
 <p>Fortunately, <a href="https://github.com/vuejs/vue-class-component" target="_blank" rel="external">vue-class-component</a> can solve both of these problems. It’s an official companion library that allows you to declare components as native JavaScript classes, with a <code>@Component</code> decorator. As an example, let’s rewrite the above component:</p>
 <figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Component <span class="keyword">from</span> <span class="string">'vue-class-component'</span></div><div class="line"></div><div class="line"><span class="comment">// The @Component decorator indicates the class is a Vue component</span></div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  <span class="comment">// All component options are allowed in here</span></div><div class="line">  template: <span class="string">'&lt;button @click="onClick"&gt;Click!&lt;/button&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> MyComponent <span class="keyword">extends</span> Vue &#123;</div><div class="line">  <span class="comment">// Initial data can be declared as instance properties</span></div><div class="line">  message: <span class="built_in">string</span> = <span class="string">'Hello!'</span></div><div class="line"></div><div class="line">  <span class="comment">// Component methods can be declared as instance methods</span></div><div class="line">  onClick (): <span class="built_in">void</span> &#123;</div><div class="line">    <span class="built_in">window</span>.alert(<span class="keyword">this</span>.message)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>With this syntax alternative, our component definition is not only shorter, but TypeScript can also infer the types of <code>message</code> and <code>onClick</code> without explicit interface declarations. This strategy even allows you to handle types for computed properties, lifecycle hooks, and render functions. For full usage details, see <a href="https://github.com/vuejs/vue-class-component#vue-class-component" target="_blank" rel="external">the vue-class-component docs</a>.</p>
+<h2 id="Declaring-Types-of-Vue-Plugins"><a href="#Declaring-Types-of-Vue-Plugins" class="headerlink" title="Declaring Types of Vue Plugins"></a>Declaring Types of Vue Plugins</h2><p>Plugins may add to Vue’s global/instance properties and component options. In these cases, type declarations are needed to make plugins compile in TypeScript. Fortunately, there’s a TypeScript feature to augment existing types called <a href="https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation" target="_blank" rel="external">module augmentation</a>.</p>
+<p>For example, to declare an instance property <code>$myProperty</code> with type <code>string</code>:</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 1. Make sure to import 'vue' before declaring augmented types</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="comment">// 2. Specify a file with the types you want to augment</span></div><div class="line"><span class="comment">//    Vue has the constructor type in types/vue.d.ts</span></div><div class="line"><span class="keyword">declare</span> <span class="keyword">module</span> 'vue/types/vue' &#123;</div><div class="line">  <span class="comment">// 3. Declare augmentation for Vue</span></div><div class="line">  <span class="keyword">interface</span> Vue &#123;</div><div class="line">    $myProperty: <span class="built_in">string</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>After including the above code as a declaration file (like <code>my-property.d.ts</code>) in your project, you can use <code>$myProperty</code> on a Vue instance.</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue()</div><div class="line"><span class="built_in">console</span>.log(vm.$myProperty) <span class="comment">// This will be successfully compiled</span></div></pre></td></tr></table></figure>
+<p>You can also declare additional global properties and component options:</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="keyword">declare</span> <span class="keyword">module</span> 'vue/types/vue' &#123;</div><div class="line">  <span class="comment">// Global properties can be declared</span></div><div class="line">  <span class="comment">// by using `namespace` instead of `interface`</span></div><div class="line">  <span class="keyword">namespace</span> Vue &#123;</div><div class="line">    <span class="keyword">const</span> $myGlobal: <span class="built_in">string</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// ComponentOptions is declared in types/options.d.ts</span></div><div class="line"><span class="keyword">declare</span> <span class="keyword">module</span> 'vue/types/options' &#123;</div><div class="line">  <span class="keyword">interface</span> ComponentOptions&lt;V <span class="keyword">extends</span> Vue&gt; &#123;</div><div class="line">    myOption?: <span class="built_in">string</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The above declarations allow the following code to be compiled:</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Global property</span></div><div class="line"><span class="built_in">console</span>.log(Vue.$myGlobal)</div><div class="line"></div><div class="line"><span class="comment">// Additional component option</span></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  myOption: <span class="string">'Hello'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
     
       <div class="guide-links">

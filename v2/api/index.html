@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/api/index.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/api/index.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -283,14 +291,14 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.errorHandler = <span class="function"><span class="keyword">function</span> (<span class="params">err, vm, info</span>) </span>&#123;</div><div class="line">  <span class="comment">// manuseia o erro</span></div><div class="line">  <span class="comment">// `info` é um erro específico do Vue, ex: cada lifecycle hook</span></div><div class="line">  <span class="comment">// que o erro foi encontrado. Disponível apenas em 2.2.0+</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Atribui um manipulador para errors não detectados durante a renderização do componente e dos observadores. O manipulador é chamado com o erro e a instância Vue.</p>
 <blockquote>
-<p>No 2.2.0, esse hook também captura erros nos lifecycle hooks do componente. Além disso, quando esse hook é  <code>undefined</code> os erros capturados são logados com <code>console.error</code> em vez de quebrar o app.</p>
-<p>No 2.4.0, esse hook também captura erros disparados dentro de manipuladores de eventos customizados Vue.</p>
+<p>No 2.2.0+, esse gatilho também captura erros em gatilhos de ciclo-de-vida do componente. Além disso, quando esse gatilho é <code>undefined</code>, os erros capturados são registrados com <code>console.error</code> em vez de quebrar o aplicativo.</p>
+<p>No 2.4.0+, esse gatilho também captura erros disparados dentro de manipuladores de eventos personalizados.</p>
 <p><a href="https://sentry.io" target="_blank" rel="external">Sentry</a>, um serviço de rastreamento de erro, fornece <a href="https://sentry.io/for/vue/" target="_blank" rel="external">integração oficial</a> usando essa opção.</p>
 </blockquote>
 </li>
 </ul>
 <h3 id="warnHandler"><a href="#warnHandler" class="headerlink" title="warnHandler"></a>warnHandler</h3><blockquote>
-<p>New in 2.4.0</p>
+<p>New in 2.4.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong> <code>Function</code></p>
@@ -324,19 +332,19 @@
 </li>
 </ul>
 <h3 id="performance"><a href="#performance" class="headerlink" title="performance"></a>performance</h3><blockquote>
-<p>Novo no 2.2.0</p>
+<p>Novo em 2.2.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Tipo:</strong> <code>boolean</code></p>
 </li>
-<li><p><strong>Padrão:</strong> <code>false (a partir do 2.2.3)</code></p>
+<li><p><strong>Padrão:</strong> <code>false (desde 2.2.3+)</code></p>
 </li>
 <li><p><strong>Uso</strong>:</p>
 <p>Defina <code>true</code> para habilitar o rastreamento de performance do init, compile, render e patch do componente na timeline do inspetor do navegador. Só funciona no modo de desenvolvimento e em navegadores que suportam a API do <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark" target="_blank" rel="external">performance.mark</a>.</p>
 </li>
 </ul>
 <h3 id="productionTip"><a href="#productionTip" class="headerlink" title="productionTip"></a>productionTip</h3><blockquote>
-<p>Novo no 2.2.0</p>
+<p>Novo em 2.2.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Tipo:</strong> <code>boolean</code></p>
@@ -379,7 +387,7 @@
 <p>Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// modify data</span></div><div class="line">vm.msg = <span class="string">'Hello'</span></div><div class="line"><span class="comment">// DOM not updated yet</span></div><div class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// DOM updated</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <blockquote>
-<p>New in 2.1.0: returns a Promise if no callback is provided and Promise is supported in the execution environment.</p>
+<p>New in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment.</p>
 </blockquote>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/reactivity.html#Async-Update-Queue">Async Update Queue</a></p>
@@ -410,14 +418,14 @@
 <li><p><strong>Arguments:</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
-<li><code>{string | number} key</code></li>
+<li><code>{string | number} key/index</code></li>
 </ul>
+<blockquote>
+<p>Only works with Array + index in 2.2.0+.</p>
+</blockquote>
 </li>
 <li><p><strong>Usage:</strong></p>
 <p>Delete a property on an object. If the object is reactive, ensure the deletion triggers view updates. This is primarily used to get around the limitation that Vue cannot detect property deletions, but you should rarely need to use it.</p>
-<blockquote>
-<p>Also works with on Array + index in 2.2.0+.</p>
-</blockquote>
 <p class="tip">The target object cannot be a Vue instance, or the root data object of a Vue instance.</p>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/reactivity.html">Reactivity in Depth</a></p>
@@ -656,12 +664,12 @@
 </li>
 <li><p><strong>Ver também:</strong></p>
 <ul>
-<li><a href="../guide/render-function">Funções render</a></li>
+<li><a href="../guide/render-function.html">Funções de Renderização</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="renderError"><a href="#renderError" class="headerlink" title="renderError"></a>renderError</h3><blockquote>
-<p>New in 2.2.0</p>
+<p>New in 2.2.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong> <code>(createElement: () =&gt; VNode, error: Error) =&gt; VNode</code></p>
@@ -673,16 +681,17 @@
 <li><p><strong>Example:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  render (h) &#123;</div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'oops'</span>)</div><div class="line">  &#125;,</div><div class="line">  renderError (h, err) &#123;</div><div class="line">    <span class="keyword">return</span> h(<span class="string">'pre'</span>, &#123; <span class="attr">style</span>: &#123; <span class="attr">color</span>: <span class="string">'red'</span> &#125;&#125;, err.stack)</div><div class="line">  &#125;</div><div class="line">&#125;).$mount(<span class="string">'#app'</span>)</div></pre></td></tr></table></figure>
 </li>
-<li><p><strong>See also:</strong></p>
+<li><p><strong>See also:</strong><br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <ul>
-<li><a href="../guide/render-function">Render Functions</a><blockquote>
+<li><a href="../guide/render-function">Render Functions</a><h1 id="gt-gt-gt-gt-gt-gt-gt-refs-remotes-vuejs-master-src-v2-api-index-md"><a href="#gt-gt-gt-gt-gt-gt-gt-refs-remotes-vuejs-master-src-v2-api-index-md" class="headerlink" title="&gt;&gt;&gt;&gt;&gt;&gt;&gt; refs/remotes/vuejs/master:src/v2/api/index.md"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; refs/remotes/vuejs/master:src/v2/api/index.md</h1></li>
+<li><a href="../guide/render-function.html">Render Functions</a><blockquote>
 <blockquote>
 <blockquote>
 <blockquote>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>refs/remotes/vuejs/master:src/v2/api/index.md</p>
+<p>refs/remotes/vuejs/master</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -694,7 +703,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="Opcoes-Lifecycle-Hooks"><a href="#Opcoes-Lifecycle-Hooks" class="headerlink" title="Opções / Lifecycle Hooks"></a>Opções / Lifecycle Hooks</h2><p>Todos os lifecycle hooks automaticamente possuem seus contextos <code>this</code> vinculados à instância, assim você pode acessar dados, propriedades computadas e métodos. Isso significa que <strong>você não deve usar uma arrow function para definir um método lifecycle</strong> (e.g. <code>created: () =&gt; this.fetchTodos()</code>). Isto porque arrow functions vinculam o contexto pai, assim <code>this</code> não será a instância Vue como você espera e <code>this.fetchTodos</code> será <code>undefined</code>.</p>
+<h2 id="Opcoes-Lifecycle-Hooks"><a href="#Opcoes-Lifecycle-Hooks" class="headerlink" title="Opções / Lifecycle Hooks"></a>Opções / Lifecycle Hooks</h2><p class="tip">Todos os gatilhos de ciclo-de-vida automaticamente possuem seus contextos <code>this</code> vinculados à instância, assim você pode acessar dados, propriedades computadas e métodos. Isso significa que <strong>você não deve usar Arrow Function para definir este tipo de método</strong> (por exemplo, <code>created: () =&gt; this.fetchTodos()</code>). Isto porque <em>arrow functions</em> vinculam o contexto pai, assim <code>this</code> não será a instância Vue como você espera e <code>this.fetchTodos</code> será <code>undefined</code>.</p>
+
 <h3 id="beforeCreate"><a href="#beforeCreate" class="headerlink" title="beforeCreate"></a>beforeCreate</h3><ul>
 <li><p><strong>Tipo:</strong> <code>Function</code></p>
 </li>
@@ -718,7 +728,7 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado logo antes da montagem começar: a função <code>render</code> está prestes a ser invocada pela primeira vez.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Diagrama do Ciclo de Vida</a></p>
 </li>
@@ -728,7 +738,7 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado logo após a instância ter sido montada onde <code>el</code> é substituído pelo recente criado <code>vm.$el</code>. Se a instância raiz é montada em um elemento in-document, <code>vm.$el</code> também será in-document quando <code>mounted</code> é invocada.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Diagrama do Ciclo de Vida</a></p>
 </li>
@@ -738,8 +748,8 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado quando os dados mudam, antes do virtual DOM ser re-renderizado e atualizado.</p>
-<p>Você pode realizar mais mudanças de estado neste hook e elas não irão disparar re-renders adicionais.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p>Você pode realizar mais mudanças de estado neste gatilho e elas não irão disparar re-renders adicionais.</p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Diagrama do Ciclo de Vida</a></p>
 </li>
@@ -749,8 +759,8 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado após a mudança de dados fazer o virtual DOM ser re-renderizado e atualizado.</p>
-<p>O DOM do componente estará no estado <code>updated</code> quando este hook for invocado, assim você pode realizar operações DOM-dependent neste hook.<br>Entretanto, na maioria dos casos você deveria evitar mudar o estado deste hook, melhor utilizar <a href="#computed">propriedades computadas</a> ou <a href="#watch">watcher</a>.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p>O DOM do componente estará no estado <code>updated</code> quando este gatilho for invocado, assim você pode realizar operações dependentes de DOM neste gatilho.<br>Entretanto, na maioria dos casos você deveria evitar mudar o estado deste gatilho, melhor utilizar <a href="#computed">propriedades computadas</a> ou <a href="#watch">observadores</a>.</p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Diagrama do Ciclo de Vida</a></p>
 </li>
@@ -760,7 +770,7 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado quando um componente kept-alive é ativado.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong></p>
 <ul>
@@ -774,7 +784,7 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado quando um componente kept-alive é desativado.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong></p>
 <ul>
@@ -788,7 +798,7 @@
 </li>
 <li><p><strong>Detalhes:</strong></p>
 <p>Invocado logo antes da instância Vue ser destruída. Neste ponto a instância ainda é completamente funcional.</p>
-<p><strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p><strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Diagrama do Ciclo de Vida</a></p>
 </li>
@@ -797,10 +807,10 @@
 <li><p><strong>Tipo:</strong> <code>Function</code></p>
 </li>
 <li><p><strong>Detalhes:</strong></p>
-<p>Invocado após a instância Vue ter sido destruída. Quando este hook é invocado, todas as diretivas da instância Vue já foram desvinculadas, todos os event listeners foram removidos, e todas as instâncias Vue filhas também foram destruídas.</p>
+<p>Invocado após a instância Vue ter sido destruída. Quando este gatilho é invocado, todas as diretivas da instância Vue já foram desvinculadas, todos os event listeners foram removidos, e todas as instâncias Vue filhas também foram destruídas.</p>
 </li>
 </ul>
-<p>  <strong>Este hook não é invocado durante a renderização server-side.</strong></p>
+<p>  <strong>Este gatilho não é invocado durante a renderização server-side.</strong></p>
 <ul>
 <li><strong>Ver também:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Diagrama do Ciclo de Vida</a></li>
 </ul>
@@ -874,7 +884,7 @@
 </li>
 </ul>
 <h3 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide / inject"></a>provide / inject</h3><blockquote>
-<p>New in 2.2.0</p>
+<p>New in 2.2.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong></p>
@@ -898,7 +908,7 @@
 <p>With ES2015 Symbols, function <code>provide</code> and object <code>inject</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> s = <span class="built_in">Symbol</span>()</div><div class="line"></div><div class="line"><span class="keyword">const</span> Provider = &#123;</div><div class="line">  provide () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      [s]: <span class="string">'foo'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Child = &#123;</div><div class="line">  <span class="attr">inject</span>: &#123; s &#125;,</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>The next 2 examples only work with Vue &gt; 2.2.1. Below that version, injected values were resolved after the <code>props</code> and the <code>data</code> initialization.</p>
+<p>The next 2 examples work with Vue 2.2.1+. Below that version, injected values were resolved after the <code>props</code> and the <code>data</code> initialization.</p>
 </blockquote>
 <p>Using an injected value as the default for a prop:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> Child = &#123;</div><div class="line">  <span class="attr">inject</span>: [<span class="string">'foo'</span>],</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">bar</span>: &#123;</div><div class="line">      <span class="keyword">default</span> () &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.foo</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -921,8 +931,10 @@
 </li>
 <li><p><strong>Default:</strong> <code>["{{", "}}"]</code></p>
 </li>
+<li><p><strong>Restrictions:</strong> This option is only available in the full build, with in-browser compilation.</p>
+</li>
 <li><p><strong>Details:</strong></p>
-<p>Change the plain text interpolation delimiters. <strong>This option is only available in the full build.</strong></p>
+<p>Change the plain text interpolation delimiters.</p>
 </li>
 <li><p><strong>Example:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">delimiters</span>: [<span class="string">'$&#123;'</span>, <span class="string">'&#125;'</span>]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Delimiters changed to ES6 template string style</span></div></pre></td></tr></table></figure>
@@ -954,7 +966,7 @@
 </li>
 </ul>
 <h3 id="inheritAttrs"><a href="#inheritAttrs" class="headerlink" title="inheritAttrs"></a>inheritAttrs</h3><blockquote>
-<p>New in 2.4.0</p>
+<p>New in 2.4.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong> <code>boolean</code></p>
@@ -963,15 +975,18 @@
 </li>
 <li><p><strong>Details:</strong></p>
 <p>By default, parent scope attribute bindings that are not recognized as props will “fallthrough” and be applied to the root element of the child component as normal HTML attributes. When authoring a component that wraps a target element or another component, this may not always be the desired behavior. By setting <code>inheritAttrs</code> to <code>false</code>, this default behavior can be disabled. The attributes are available via the <code>$attrs</code> instance property (also new in 2.4) and can be explicitly bound to a non-root element using <code>v-bind</code>.</p>
+<p>Note: this option does <strong>not</strong> affect <code>class</code> and <code>style</code> bindings.</p>
 </li>
 </ul>
 <h3 id="comments"><a href="#comments" class="headerlink" title="comments"></a>comments</h3><blockquote>
-<p>New in 2.4.0</p>
+<p>New in 2.4.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong> <code>boolean</code></p>
 </li>
 <li><p><strong>Default:</strong> <code>false</code></p>
+</li>
+<li><p><strong>Restrictions:</strong> This option is only available in the full build, with in-browser compilation.</p>
 </li>
 <li><p><strong>Details:</strong></p>
 <p>When set to <code>true</code>, will preserve and render HTML comments found in templates. The default behavior is discarding them.</p>
@@ -987,7 +1002,7 @@
 </li>
 </ul>
 <h3 id="vm-props"><a href="#vm-props" class="headerlink" title="vm.$props"></a>vm.$props</h3><blockquote>
-<p>New in 2.2.0</p>
+<p>New in 2.2.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong> <code>Object</code></p>
@@ -1064,7 +1079,7 @@
 </li>
 </ul>
 <h3 id="vm-scopedSlots"><a href="#vm-scopedSlots" class="headerlink" title="vm.$scopedSlots"></a>vm.$scopedSlots</h3><blockquote>
-<p>New in 2.1.0</p>
+<p>New in 2.1.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Type:</strong> <code>{ [name: string]: props =&gt; VNode | Array&lt;VNode&gt; }</code></p>
@@ -1115,7 +1130,7 @@
 <li><p><strong>Read only</strong></p>
 </li>
 <li><p><strong>Details:</strong></p>
-<p>Contains parent-scope attribute bindings that are not recognized (and extracted) as props. When a component doesn’t have any declared props, this essentially contains all parent-scope bindings except for <code>class</code> and <code>style</code>, and can be passed down to an inner component via <code>v-bind=&quot;$attrs&quot;</code> - useful when creating higher-order components.</p>
+<p>Contains parent-scope attribute bindings (except for <code>class</code> and <code>style</code>) that are not recognized (and extracted) as props. When a component doesn’t have any declared props, this essentially contains all parent-scope bindings (except for <code>class</code> and <code>style</code>), and can be passed down to an inner component via <code>v-bind=&quot;$attrs&quot;</code> - useful when creating higher-order components.</p>
 </li>
 </ul>
 <h3 id="vm-listeners"><a href="#vm-listeners" class="headerlink" title="vm.$listeners"></a>vm.$listeners</h3><ul>
@@ -1302,7 +1317,7 @@
 <li><p><strong>Usage:</strong></p>
 <p>Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update. This is the same as the global <code>Vue.nextTick</code>, except that the callback’s <code>this</code> context is automatically bound to the instance calling this method.</p>
 <blockquote>
-<p>New in 2.1.0: returns a Promise if no callback is provided and Promise is supported in the execution environment.</p>
+<p>New in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment.</p>
 </blockquote>
 </li>
 <li><p><strong>Example:</strong></p>
@@ -1388,7 +1403,7 @@
 </li>
 </ul>
 <h3 id="v-else-if"><a href="#v-else-if" class="headerlink" title="v-else-if"></a>v-else-if</h3><blockquote>
-<p>New in 2.1.0</p>
+<p>New in 2.1.0+</p>
 </blockquote>
 <ul>
 <li><p><strong>Expects:</strong> <code>any</code></p>
@@ -1447,7 +1462,7 @@
 </li>
 <li><p><strong>Usage:</strong></p>
 <p>Attaches an event listener to the element. The event type is denoted by the argument. The expression can either be a method name or an inline statement, or simply omitted when there are modifiers present.</p>
-<p>Starting in <code>2.4.0</code>, <code>v-on</code> also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.</p>
+<p>Starting in 2.4.0+, <code>v-on</code> also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.</p>
 <p>When used on a normal element, it listens to <strong>native DOM events</strong> only. When used on a custom element component, it also listens to <strong>custom events</strong> emitted on that child component.</p>
 <p>When listening to native DOM events, the method receives the native event as the only argument. If using inline statement, the statement has access to the special <code>$event</code> property: <code>v-on:click=&quot;handle(&#39;ok&#39;, $event)&quot;</code>.</p>
 </li>
@@ -1701,7 +1716,7 @@
 <p>When wrapped around a dynamic component, <code>&lt;keep-alive&gt;</code> caches the inactive component instances without destroying them. Similar to <code>&lt;transition&gt;</code>, <code>&lt;keep-alive&gt;</code> is an abstract component: it doesn’t render a DOM element itself, and doesn’t show up in the component parent chain.</p>
 <p>When a component is toggled inside <code>&lt;keep-alive&gt;</code>, its <code>activated</code> and <code>deactivated</code> lifecycle hooks will be invoked accordingly.</p>
 <blockquote>
-<p>In 2.2.0 and above, <code>activated</code> and <code>deactivated</code> will fire for all nested components inside a <code>&lt;keep-alive&gt;</code> tree.</p>
+<p>In 2.2.0+ and above, <code>activated</code> and <code>deactivated</code> will fire for all nested components inside a <code>&lt;keep-alive&gt;</code> tree.</p>
 </blockquote>
 <p>Primarily used with preserve component state or avoid re-rendering.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- basic --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- multiple conditional children --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">comp-a</span> <span class="attr">v-if</span>=<span class="string">"a &gt; 1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp-a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">comp-b</span> <span class="attr">v-else</span>&gt;</span><span class="tag">&lt;/<span class="name">comp-b</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- used together with &lt;transition&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">transition</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -1711,7 +1726,7 @@
 <ul>
 <li><p><strong><code>include</code> and <code>exclude</code></strong></p>
 <blockquote>
-<p>New in 2.1.0</p>
+<p>New in 2.1.0+</p>
 </blockquote>
 <p>The <code>include</code> and <code>exclude</code> props allow components to be conditionally cached. Both props can be a comma-delimited string, a RegExp or an Array:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- comma-delimited string --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">include</span>=<span class="string">"a,b"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- regex (use v-bind) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">:include</span>=<span class="string">"/a|b/"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Array (use v-bind) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">:include</span>=<span class="string">"['a', 'b']"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div></pre></td></tr></table></figure>

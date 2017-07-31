@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/plugins.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/plugins.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/plugins.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/plugins.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/plugins.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/plugins.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/plugins.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Plugins — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/plugins.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -622,29 +630,29 @@
     
       <h1>Plugins</h1>
     
-    <h2 id="Escrevendo-um-Plugin"><a href="#Escrevendo-um-Plugin" class="headerlink" title="Escrevendo um Plugin"></a>Escrevendo um Plugin</h2><p>Plugins geralmente acrescentam funcionalidade ao Vue em nível global. Não há um escopo estrito definido para um plugin. Existem vários tipos de plugin que você pode escrever:</p>
+    <h2 id="Escrevendo-um-Plugin"><a href="#Escrevendo-um-Plugin" class="headerlink" title="Escrevendo um Plugin"></a>Escrevendo um Plugin</h2><p>Plugins geralmente acrescentam funcionalidade ao Vue em nível global. Não há um escopo estrito definido para um <em>plugin</em>. Existem vários tipos que você pode escrever:</p>
 <ol>
-<li><p>Adicionar alguns métodos e propriedades globais. p. ex. <a href="https://github.com/karol-f/vue-custom-element" target="_blank" rel="external">vue-custom-element</a></p>
+<li><p>Adicionar alguns métodos e propriedades globais. Exemplo: <a href="https://github.com/karol-f/vue-custom-element" target="_blank" rel="external">vue-custom-element</a></p>
 </li>
-<li><p>Adicionar um ou mais recurso global: directives/filters/transitions etc. p. ex. <a href="https://github.com/vuejs/vue-touch" target="_blank" rel="external">vue-touch</a></p>
+<li><p>Adicionar um ou mais recursos globais: diretivas/filtros/transições etc. Exemplo: <a href="https://github.com/vuejs/vue-touch" target="_blank" rel="external">vue-touch</a></p>
 </li>
-<li><p>Adicionar algumas opções de componente via mixin global. p. ex. <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">vuex</a></p>
+<li><p>Adicionar algumas opções de componente via <em>mixin</em> global. Exemplo: <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">vuex</a></p>
 </li>
 <li><p>Adicionar métodos para instâncias Vue incluindo-os em <code>Vue.prototype</code>.</p>
 </li>
-<li><p>Uma biblioteca com uma API própria, que ao mesmo tempo injeta alguma combinação dos anteriores. p. ex. <a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a></p>
+<li><p>Uma biblioteca com uma API própria, que ao mesmo tempo injeta alguma combinação dos anteriores. Exemplo: <a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a></p>
 </li>
 </ol>
-<p>Um plugin do Vue.js deve expor um método <code>install</code>. Esse método será chamado tendo o construtor <code>Vue</code> como primeiro argumento, junto com possíveis <code>options</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">MyPlugin.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue, options</span>) </span>&#123;</div><div class="line">  <span class="comment">// 1. adicionar método ou propriedade global</span></div><div class="line">  Vue.myGlobalMethod = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// alguma lógica ...</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 2. adicionar um recurso global</span></div><div class="line">  Vue.directive(<span class="string">'my-directive'</span>, &#123;</div><div class="line">    bind (el, binding, vnode, oldVnode) &#123;</div><div class="line">      <span class="comment">// alguma lógica ...</span></div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// 3. adicionar algumas opções de componente</span></div><div class="line">  Vue.mixin(&#123;</div><div class="line">    <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// alguma lógica ...</span></div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// 4. adicionar um método de instância</span></div><div class="line">  Vue.prototype.$myMethod = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</div><div class="line">    <span class="comment">// alguma lógica ...</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Usando-um-Plugin"><a href="#Usando-um-Plugin" class="headerlink" title="Usando um Plugin"></a>Usando um Plugin</h2><p>Use plugins chamando o método global <code>Vue.use()</code>:</p>
+<p>Um <em>plugin</em> do Vue deve expor um método <code>install</code>. Esse método será chamado tendo o construtor <code>Vue</code> como primeiro argumento, junto com possíveis <code>options</code>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">MyPlugin.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue, options</span>) </span>&#123;</div><div class="line">  <span class="comment">// 1. adicionar método ou propriedade global</span></div><div class="line">  Vue.myGlobalMethod = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// alguma lógica ...</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 2. adicionar um recurso global</span></div><div class="line">  Vue.directive(<span class="string">'my-directive'</span>, &#123;</div><div class="line">    bind (el, binding, vnode, oldVnode) &#123;</div><div class="line">      <span class="comment">// alguma lógica ...</span></div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// 3. adicionar algumas opções de componente</span></div><div class="line">  Vue.mixin(&#123;</div><div class="line">    <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// alguma lógica ...</span></div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// 4. adicionar um método de instância</span></div><div class="line">  Vue.prototype.$myMethod = <span class="function"><span class="keyword">function</span> (<span class="params">methodOptions</span>) </span>&#123;</div><div class="line">    <span class="comment">// algo lógico ...</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Usando-um-Plugin"><a href="#Usando-um-Plugin" class="headerlink" title="Usando um Plugin"></a>Usando um Plugin</h2><p>Use <em>plugins</em> chamando o método global <code>Vue.use()</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// irá chamar `MyPlugin.install(Vue)`</span></div><div class="line">Vue.use(MyPlugin)</div></pre></td></tr></table></figure>
 <p>Você pode opcionalmente passar algumas opções:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.use(MyPlugin, &#123; <span class="attr">someOption</span>: <span class="literal">true</span> &#125;)</div></pre></td></tr></table></figure>
-<p><code>Vue.use</code> automaticamente previne que você instale o mesmo plugin mais que uma vez, portanto chamar <code>Vue.use</code> várias vezes para o mesmo plugin irá instalar o plugin uma única vez.</p>
-<p>Alguns plugins disponibilizados como plugins oficiais do Vue.js, como o <code>vue-router</code>, automaticamente chamam <code>Vue.use()</code> se <code>Vue</code> estiver acessível como uma variável global. No entanto, num ambiente de módulos como o CommonJS, você sempre precisa chamar <code>Vue.use()</code> explicitamente:</p>
+<p><code>Vue.use</code> automaticamente previne que você instale o mesmo <em>plugin</em> mais que uma vez, portanto chamar <code>Vue.use</code> várias vezes para o mesmo <em>plugin</em> irá instalá-lo uma única vez.</p>
+<p>Alguns <em>plugins</em> disponibilizados como oficiais do Vue, como o <code>vue-router</code>, automaticamente chamam <code>Vue.use()</code> se <code>Vue</code> estiver acessível como uma variável global. No entanto, num ambiente de módulos como o CommonJS, você sempre precisa chamar <code>Vue.use()</code> explicitamente:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Quando estiver usando CommonJS via Browserify ou Webpack</span></div><div class="line"><span class="keyword">var</span> Vue = <span class="built_in">require</span>(<span class="string">'vue'</span>)</div><div class="line"><span class="keyword">var</span> VueRouter = <span class="built_in">require</span>(<span class="string">'vue-router'</span>)</div><div class="line"></div><div class="line"><span class="comment">// Não se esqueça de chamar Vue.use</span></div><div class="line">Vue.use(VueRouter)</div></pre></td></tr></table></figure>
-<p>Confira <a href="https://github.com/vuejs/awesome-vue#components--libraries" target="_blank" rel="external">awesome-vue</a> para uma enorme coleção de plugins e bibliotecas contribuídas pela comunidade.</p>
+<p>Confira <a href="https://github.com/vuejs/awesome-vue#components--libraries" target="_blank" rel="external">awesome-vue</a> para uma enorme coleção de <em>plugins</em> e bibliotecas contribuídas pela comunidade.</p>
 
     
       <div class="guide-links">

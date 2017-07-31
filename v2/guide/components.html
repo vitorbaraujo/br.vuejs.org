@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/components.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/components.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/components.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/components.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/components.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/components.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/components.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Componentes — Vue.js">
         <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
@@ -112,13 +120,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -176,13 +184,13 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Traduções</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">Inglês</a></li>
-    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Chinês</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Coreano</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Francês</a></li>
+    <li><a href="https://vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Inglês</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Japonês</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/components.html" class="nav-link" target="_blank">Russo</a></li>
   </ul>
 </li>
 
@@ -627,7 +635,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#some-element'</span>,</div><div class="line">  <span class="comment">// opções</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Para registrar um componente global, você pode usar <code>Vue.component(tagName, options)</code>. Por exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</div><div class="line">  <span class="comment">// opções</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p class="tip">Observe que o Vue não segue as regras da <a href="http://www.w3.org/TR/custom-elements/#concepts" target="_blank" rel="external">W3C</a> para tags personalizadas (letras minúsculas, precisa ter um hífen) embora seguir essa convenção seja considerada uma boa prática</p>
+<p class="tip">Observe que o Vue não segue as regras da <a href="http://www.w3.org/TR/custom-elements/#custom-elements-core-concepts" target="_blank" rel="external">W3C</a> para tags personalizadas (letras minúsculas, precisa ter um hífen) embora seguir essa convenção seja considerada uma boa prática</p>
 
 <p>Uma vez registrado, um componente pode ser usado em uma instância como um elemento personalizado <code>&lt;my-component&gt;&lt;/my-component&gt;</code>. Tenha certeza que o elemento é registrado <strong>antes</strong> de ser instanciado na raiz do Vue. Aqui está um exemplo completo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -763,7 +771,7 @@ new Vue({
 })
 </script>
 
-<h3 id="Literal-vs-Dinamico"><a href="#Literal-vs-Dinamico" class="headerlink" title="Literal vs. Dinâmico"></a>Literal vs. Dinâmico</h3><p>Um erro comum que iniciantes tendem a fazer é tentar passar um número usando a sintaxe literal:</p>
+<h3 id="Literal-vs-Dinamico"><a href="#Literal-vs-Dinamico" class="headerlink" title="Literal vs. Dinâmico"></a>Literal vs. Dinâmico</h3><p>Um erro comum que iniciantes tendem a fazer é tentar passar um número usando sintaxe literal:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- isto passa a string "1" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">some-prop</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>No entanto, uma vez que isso é uma propriedade literal, seu valor é passado como uma string <code>&quot;1&quot;</code> ao invés de um número real. Se quisermos passar um número JavaScript real, nós precisamos usar o <code>v-bind</code> para que o seu valor seja avaliado como uma expressão JavaScript:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- isto passa um número real --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">v-bind:some-prop</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -830,7 +838,7 @@ new Vue({
 
 <p>Aqui está um exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"counter-event-example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; total &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button-counter</span> <span class="attr">v-on:increment</span>=<span class="string">"incrementTotal"</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button-counter</span> <span class="attr">v-on:increment</span>=<span class="string">"incrementTotal"</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'button-counter'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;button v-on:click="increment"&gt;&#123;&#123; counter &#125;&#125;&lt;/button&gt;'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">counter</span>: <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">increment</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.counter += <span class="number">1</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'increment'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#counter-event-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">total</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">incrementTotal</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.total += <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'button-counter'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;button v-on:click="incrementCounter"&gt;&#123;&#123; counter &#125;&#125;&lt;/button&gt;'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">counter</span>: <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">incrementCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.counter += <span class="number">1</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'increment'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#counter-event-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">total</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">incrementTotal</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.total += <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="counter-event-example" class="demo">
   <p>{{ total }}</p>
@@ -839,14 +847,14 @@ new Vue({
 </div>
 <script>
 Vue.component('button-counter', {
-  template: '<button v-on:click="increment">{{ counter }}</button>',
+  template: '<button v-on:click="incrementCounter">{{ counter }}</button>',
   data: function () {
     return {
       counter: 0
     }
   },
   methods: {
-    increment: function () {
+    incrementCounter: function () {
       this.counter += 1
       this.$emit('increment')
     }
@@ -873,25 +881,24 @@ new Vue({
 </blockquote>
 <p>Em alguns casos nós podemos precisar de uma “ligação bidirecional” para uma propriedade - na verdade, no Vue 1.x isto é exatamente o que o modificador <code>.sync</code> fornecia. Quando um componente filho altera a propriedade que tem <code>.sync</code>, a mudança de valor refletirá no pai. Isto é conveniente, no entanto isso leva a problemas de manutenção a longo prazo porque quebra a suposição de fluxo de dados unidirecional: o código que altera propriedades do filho está implicitamente afetando o estado do pai.</p>
 <p>Este é o motivo pelo qual removemos o modificador <code>.sync</code> quando a versão 2.0 foi lançada. No entanto, descobrimos que, de fato, existem casos em que isso pode ser útil, especialmente quando enviando componentes reutilizáveis. O que nós precisamos mudar é <strong>fazer um código no filho que afeta o estado do pai de forma mais consistente e explícita.</strong></p>
-<p>Na 2.3 nós re-introduzimos o modificador <code>.sync</code> para propriedades, mas desta vez ele é só um açúcar sintático que automaticamente se expande para uma escuta <code>v-on</code> adicional:</p>
-<p>O seguinte</p>
+<p>Na versão 2.3.0+ re-introduzimos o modificador <code>.sync</code> para propriedades, mas desta vez ele é só um pouco de “açúcar de sintaxe”, o qual automaticamente se expande para uma escuta <code>v-on</code> adicional. Por exemplo, o seguinte:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">:foo.sync</span>=<span class="string">"bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>é expandido para:</p>
+<p>É expandido para:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">:foo</span>=<span class="string">"bar"</span> @<span class="attr">update:foo</span>=<span class="string">"val =&gt; bar = val"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Para o componente filho atualizar o valor de <code>foo</code>, ele precisa explicitamente emitir um evento em vez de alterar a propriedade:</p>
+<p>Para o componente filho atualizar o valor de <code>foo</code>, ele precisa explicitamente emitir um evento em vez de alterar a propriedade diretamente:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">this</span>.$emit(<span class="string">'update:foo'</span>, newValue)</div></pre></td></tr></table></figure>
-<h3 id="Componentes-de-Input-em-Formulario-usando-Eventos-Personalizados"><a href="#Componentes-de-Input-em-Formulario-usando-Eventos-Personalizados" class="headerlink" title="Componentes de Input em Formulário usando Eventos Personalizados"></a>Componentes de Input em Formulário usando Eventos Personalizados</h3><p>Eventos personalizados também podem ser usados para criar inputs personalizados que funcionam com <code>v-model</code>. Lembre-se:</p>
+<h3 id="Componentes-de-Formularios-usando-Eventos-Personalizados"><a href="#Componentes-de-Formularios-usando-Eventos-Personalizados" class="headerlink" title="Componentes de Formulários usando Eventos Personalizados"></a>Componentes de Formulários usando Eventos Personalizados</h3><p>Eventos personalizados também podem ser usados para criar <em>inputs</em> personalizados que funcionam com <code>v-model</code>. Lembre-se:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"something"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>é só um açúcar sintático para:</p>
+<p>É só um “açúcar de sintaxe” para:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span></span></div><div class="line">  <span class="attr">v-bind:value</span>=<span class="string">"something"</span></div><div class="line">  <span class="attr">v-on:input</span>=<span class="string">"something = $event.target.value"</span>&gt;</div></pre></td></tr></table></figure>
 <p>Quando usado com um componente, isto é simplificado para:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">custom-input</span></span></div><div class="line">  <span class="attr">:value</span>=<span class="string">"something"</span></div><div class="line">  @<span class="attr">input</span>=<span class="string">"value =&gt; &#123; something = value &#125;"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">custom-input</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Então, para um componente funcionar com o <code>v-model</code>, ele deveria (estes podem ser configurados em 2.2.0+):</p>
+<p>Então, para um componente funcionar com o <code>v-model</code>, ele deveria (a partir de 2.2.0+):</p>
 <ul>
 <li>aceitar uma propriedade <code>value</code></li>
 <li>emitir um evento <code>input</code> com um novo valor</li>
 </ul>
-<p>Vamos vê-lo em ação com um input monetário muito simples:</p>
+<p>Vamos vê-lo em ação com um <em>input</em> monetário muito simples:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">currency-input</span> <span class="attr">v-model</span>=<span class="string">"price"</span>&gt;</span><span class="tag">&lt;/<span class="name">currency-input</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'currency-input'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'\</span></div><div class="line">    &lt;span&gt;\</div><div class="line">      $\</div><div class="line">      &lt;input\</div><div class="line">        ref="input"\</div><div class="line">        v-bind:value="value"\</div><div class="line">        v-on:input="updateValue($event.target.value)"&gt;\</div><div class="line">    &lt;/span&gt;\</div><div class="line">  ',</div><div class="line">  <span class="attr">props</span>: [<span class="string">'value'</span>],</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="comment">// Em vez de atualizar o valor diretamente, este</span></div><div class="line">    <span class="comment">// método é usado para formatar e colocar restrições</span></div><div class="line">    <span class="comment">// no valor do input</span></div><div class="line">    updateValue: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> formattedValue = value</div><div class="line">        <span class="comment">// Remove espaços em branco de ambos os lados</span></div><div class="line">        .trim()</div><div class="line">        <span class="comment">// Reduz para 2 casas decimais</span></div><div class="line">        .slice(</div><div class="line">          <span class="number">0</span>,</div><div class="line">          value.indexOf(<span class="string">'.'</span>) === <span class="number">-1</span></div><div class="line">            ? value.length</div><div class="line">            : value.indexOf(<span class="string">'.'</span>) + <span class="number">3</span></div><div class="line">        )</div><div class="line">      <span class="comment">// Se o valor não foi normalizado ainda,</span></div><div class="line">      <span class="comment">// o substitui manualmente para acertar</span></div><div class="line">      <span class="keyword">if</span> (formattedValue !== value) &#123;</div><div class="line">        <span class="keyword">this</span>.$refs.input.value = formattedValue</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// Emite o valor do número através do evento de input</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'input'</span>, <span class="built_in">Number</span>(formattedValue))</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
@@ -934,11 +941,11 @@ new Vue({
 })
 </script>
 
-<p>A implementação acima, no entanto, é bem ingênua. Por exemplo, é permitido aos usuários entrarem com múltiplos pontos e até letras algumas vezes - urgh! Então para aqueles que querem ver um exemplo não trivial, aqui está um filtro monetário mais robusto:</p>
+<p>A implementação acima, no entanto, é bem ingênua. Por exemplo, é permitido aos usuários entrarem com múltiplos pontos e até letras algumas vezes - eca! Então para aqueles que querem ver um exemplo não trivial, aqui está um filtro monetário mais robusto:</p>
 <iframe width="100%" height="300" src="https://jsfiddle.net/chrisvfritz/1oqjojjx/embedded/result,html,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <h3 id="Personalizando-o-Componente-v-model"><a href="#Personalizando-o-Componente-v-model" class="headerlink" title="Personalizando o Componente v-model"></a>Personalizando o Componente <code>v-model</code></h3><blockquote>
-<p>Novo na 2.2.0</p>
+<p>Novo em 2.2.0+</p>
 </blockquote>
 <p>Por padrão, o <code>v-model</code> em um componente usa <code>value</code> como a propriedade e <code>input</code> como o evento, mas alguns tipos de <em>input</em> como os <em>checkboxes</em> e os botões <em>radio</em> podem querer usar a propriedade <code>value</code> para um propósito diferente. Usar a opção <code>model</code> pode evitar o conflito nesses casos:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'my-checkbox'</span>, &#123;</div><div class="line">  <span class="attr">model</span>: &#123;</div><div class="line">    <span class="attr">prop</span>: <span class="string">'checked'</span>,</div><div class="line">    <span class="attr">event</span>: <span class="string">'change'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">checked</span>: <span class="built_in">Boolean</span>,</div><div class="line">    <span class="comment">// isto permite usar a propriedade `value` para um propósito diferente</span></div><div class="line">    value: <span class="built_in">String</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -969,7 +976,6 @@ new Vue({
 <p>Tudo que estiver no <em>template</em> do pai é compilado no escopo do pai; tudo que estiver no <em>template</em> do filho é compilado no escopo do filho.</p>
 </blockquote>
 <p>Um erro comum é tentar ligar uma diretiva a uma propriedade/método do filho no <em>template</em> do pai:</p>
-<p>A common mistake is trying to bind a directive to a child property/method in the parent template:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- NÃO funciona --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">child-component</span> <span class="attr">v-show</span>=<span class="string">"someChildProperty"</span>&gt;</span><span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Assumindo que <code>someChildProperty</code> é uma propriedade no componente filho, o exemplo acima não funcionaria. O <em>template</em> do pai não tem conhecimento do estado do componente filho.</p>
 <p>Se você precisa ligar diretivas do escopo-filho a um nó de um componente raiz, você deveria fazer isso no próprio <em>template</em> do componente filho:</p>
@@ -993,7 +999,7 @@ new Vue({
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Aqui pode ser um título da página<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">main</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Um parágrafo para o conteúdo principal.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>E aqui outro.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Aqui vai alguma informação de contato<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>A API de distribuição de conteúdo é um mecanismo muito útil ao projetar componentes que devem ser compostos juntos.</p>
 <h3 id="Slots-Escopo"><a href="#Slots-Escopo" class="headerlink" title="Slots Escopo"></a>Slots Escopo</h3><blockquote>
-<p>Novo em 2.1.0</p>
+<p>Novo em 2.1.0+</p>
 </blockquote>
 <p>Um slot escopo é um tipo especial de slot que funciona como um <em>template</em> reusável (em que podemos passar dados para ele) em vez de elementos já renderizados.</p>
 <p>Em um componente filho, simplesmente passe os dados para um slot como se você estivesse passando propriedades para um componente:</p>
@@ -1027,7 +1033,6 @@ new Vue({
 <p>Com as sintaxes abreviadas para <code>v-bind</code> e <code>v-on</code>, as intenções podem ser transmitidas de forma clara e sucinta no <em>template</em>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span></span></div><div class="line">  <span class="attr">:foo</span>=<span class="string">"baz"</span></div><div class="line">  <span class="attr">:bar</span>=<span class="string">"qux"</span></div><div class="line">  @<span class="attr">event-a</span>=<span class="string">"doThis"</span></div><div class="line">  @<span class="attr">event-b</span>=<span class="string">"doThat"</span></div><div class="line">&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">slot</span>=<span class="string">"icon"</span> <span class="attr">src</span>=<span class="string">"..."</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">"main-text"</span>&gt;</span>Olá!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="Referencias-ao-Componente-Filho"><a href="#Referencias-ao-Componente-Filho" class="headerlink" title="Referências ao Componente Filho"></a>Referências ao Componente Filho</h3><p>Apesar da existência de propriedades e eventos, algumas vezes você ainda pode precisar acessar diretamente um componente filho em JavaScript. Para conseguir isso você tem que atribuir um ID de referência para o componente filho usando <code>ref</code>. Por exemplo:</p>
-<p>Despite the existence of props and events, sometimes you might still need to directly access a child component in JavaScript. To achieve this you have to assign a reference ID to the child component using <code>ref</code>. For example:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">user-profile</span> <span class="attr">ref</span>=<span class="string">"profile"</span>&gt;</span><span class="tag">&lt;/<span class="name">user-profile</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> parent = <span class="keyword">new</span> Vue(&#123; <span class="attr">el</span>: <span class="string">'#parent'</span> &#125;)</div><div class="line"><span class="comment">// acessa a instância do componente filho</span></div><div class="line"><span class="keyword">var</span> child = parent.$refs.profile</div></pre></td></tr></table></figure>
 <p>Quando <code>ref</code> é usada junto com <code>v-for</code>, a referência que você obtém será um <em>array</em> contendo os componentes filhos que espelham a fonte de dados.</p>
@@ -1044,10 +1049,10 @@ new Vue({
 <p class="tip">Se você é um usuário de <strong>Browserify</strong> que gostaria de usar componentes assíncronos, seu criador infelizmente <a href="https://github.com/substack/node-browserify/issues/58#issuecomment-21978224" target="_blank" rel="external">deixou claro </a> que carregamento assíncrono “não é algo que o Browserify irá suportar”. Oficialmente, pelo menos. A comunidade Browserify encontrou <a href="https://github.com/vuejs/vuejs.org/issues/620" target="_blank" rel="external">algumas soluções de contorno</a>, que podem ser úteis para aplicações existentes e complexas. Para todos os outros cenários, nós recomendamos simplesmente usar o Webpack, com um suporte assíncrono de primeira classe.</p>
 
 <h3 id="Componentes-Assincronos-Avancados"><a href="#Componentes-Assincronos-Avancados" class="headerlink" title="Componentes Assíncronos Avançados"></a>Componentes Assíncronos Avançados</h3><blockquote>
-<p>Novo na 2.3.0</p>
+<p>Novo em 2.3.0+</p>
 </blockquote>
-<p>A partir da 2.3 a fábrica de componente assíncrono também pode retornar um objeto do seguinte formato:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> AsyncComp = <span class="function"><span class="params">()</span> =&gt;</span> (&#123;</div><div class="line">  <span class="comment">// O componente para carregar. Deve ser uma Promise</span></div><div class="line">  component: <span class="keyword">import</span>(<span class="string">'./MyComp.vue'</span>),</div><div class="line">  <span class="comment">// Um componente para usar enquanto o componente assíncrono está carregando</span></div><div class="line">  loading: LoadingComp,</div><div class="line">  <span class="comment">// Um componente para usar se o carregamento falhar</span></div><div class="line">  error: ErrorComp,</div><div class="line">  <span class="comment">// Tempo de espera antes de mostrar o componente em loading. Padrão: 200ms.</span></div><div class="line">  delay: <span class="number">200</span>,</div><div class="line">  <span class="comment">// O componente de erro será exibido se um timeout é</span></div><div class="line">  <span class="comment">// fornecido e seu tempo é excedido. Padrão: Infinity.</span></div><div class="line">  timeout: <span class="number">3000</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>A partir da versão 2.3.0+ a fábrica de componente assíncrono também pode retornar um objeto no seguinte formato:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> AsyncComp = <span class="function"><span class="params">()</span> =&gt;</span> (&#123;</div><div class="line">  <span class="comment">// O componente a carregar, na forma de uma Promise</span></div><div class="line">  component: <span class="keyword">import</span>(<span class="string">'./MyComp.vue'</span>),</div><div class="line">  <span class="comment">// Um componente para usar enquanto o componente assíncrono está carregando</span></div><div class="line">  loading: LoadingComp,</div><div class="line">  <span class="comment">// Um componente para usar se o carregamento falhar</span></div><div class="line">  error: ErrorComp,</div><div class="line">  <span class="comment">// Tempo de espera antes de mostrar o carregamento. Padrão: 200ms</span></div><div class="line">  delay: <span class="number">200</span>,</div><div class="line">  <span class="comment">// O componente de erro será exibido se um limite de tempo é</span></div><div class="line">  <span class="comment">// fornecido e este for excedido. Padrão: Infinity</span></div><div class="line">  timeout: <span class="number">3000</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Observe que, quando usado como um componente de rota em <code>vue-router</code>, essas propriedades serão ignoradas porque os componentes assíncronos são resolvidos antecipadamente, antes que a navegação da rota ocorra. Você também precisa usar <code>vue-router</code> 2.4.0+ se você deseja usar a sintaxe acima para componentes de rota.</p>
 <h3 id="Convencoes-para-Nomeacao-de-Componentes"><a href="#Convencoes-para-Nomeacao-de-Componentes" class="headerlink" title="Convenções para Nomeação de Componentes"></a>Convenções para Nomeação de Componentes</h3><p>Ao registrar componentes (ou propriedades), você pode usar <em>kebab-case</em>, <em>camelCase</em>, ou <em>PascalCase</em>.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// na definição de um componente</span></div><div class="line">components: &#123;</div><div class="line">  <span class="comment">// registra usando kebab-case</span></div><div class="line">  <span class="string">'kebab-cased-component'</span>: &#123; <span class="comment">/* ... */</span> &#125;,</div><div class="line">  <span class="comment">// registra usando camelCase</span></div><div class="line">  <span class="string">'camelCasedComponent'</span>: &#123; <span class="comment">/* ... */</span> &#125;,</div><div class="line">  <span class="comment">// registra usando PascalCase</span></div><div class="line">  <span class="string">'PascalCasedComponent'</span>: &#123; <span class="comment">/* ... */</span> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
